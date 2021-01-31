@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  </head>
+  
+
+  <body>
+    <div ng-app="myApp">
+      <div ng-controller="controladorMorador">
+          
+        <nav>
+           
+          
+          <ul>
+            <img style="padding: 10px; position:static;"src="images/icone-branco.png" width="70" height="70" >
+            <span class="login100-menu-title">TaskManager</span><br>
+            <button class="login100-menu-btn-login" ng-click="doLogin()">login</button>
+            <button onclick="myFunction()" class="login100-menu-btn-login" ng-click="doLogout()">logout</button>
+        
+            <br><br>
+          
+            <li><a href="#controleMoradores" class="login100-menu-btn" > Cadastro de morador</a></li>
+            <li><a href="#controleTarefas" class="login100-menu-btn" > Adicionar tarefa </a></li>
+            <li><a href="#administrarPunicoes" class="login100-menu-btn" > Administrar punições </a></li>
+            <li><a href="#consultarTarefas" class="login100-menu-btn" > Consultar tarefas e punições</a></li> 
+          </ul>
+        </nav>
+      </div>
+  
+    <div style="padding-left: 300px;" class="limiter">
+			<div id="controleMoradores" class="container-login100">
+				<div class="wrap-login100 p-t-50 p-b-90" ng-controller="controladorMorador">
+					<form class="login100-form validate-form flex-sb flex-w"> 
+            <span class="login100-form-title p-b-51">
+              Cadastro de Morador
+            </span>     
+	
+						<div class="wrap-input100 validate-input m-b-16" data-validate = "Data is required">
+							<input class="input100" type="text" name="ra" placeholder="RA" ng-model="ra"/>
+							<span class="focus-input100"></span>
+						</div>
+	
+						<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+							<input class="input100" type="text" name="apelido" placeholder="Apelido" ng-model="apelido"/>
+							<span class="focus-input100"></span>
+						</div>
+	
+						<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+							<input class="input100" type="text" name="Nome" placeholder="Nome"  ng-model="nome"/>
+							<span class="focus-input100"></span>
+						</div>
+					 
+						<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+							<input class="input100" type="text" name="curso" placeholder="Curso"  ng-model="curso"/>
+							<span class="focus-input100"></span>
+						</div>
+	
+						<button class="login100-form-btn" ng-click="acessa()">ACESSA</button> &nbsp;
+            <button class="login100-form-btn" ng-click="insere()">INSERE</button> &nbsp;
+            
+					</form>
+          
+          <span class="txt2">{{mensagem}}</span>
+         
+					<table cellspacing="8">
+	
+						<tr>
+							<th>{{hra}}</th>
+							<th>{{hapelido}}</th>
+							<th>{{hnome}}</th>
+              <th>{{hcurso}}</th>
+              <th>{{hopcao}}</th>
+						</tr>
+						<tr ng-repeat="x in alunos">
+							<td>{{ x.ra }}</td>
+							<td>{{ x.apelido }}</td>
+							<td>{{ x.nome }}</td>
+							<td>{{ x.curso }}</td>
+							<td>
+								<button class="login100-table-btn" ng-click="atualiza(x.ra)">ATUALIZA</button>
+								<button class="login100-table-btn" ng-click="remove(x.ra)">REMOVE</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+      </div>
+      
+
+
+
+
+
+      <div class="container-login100">
+        <div id="controleTarefas" class="wrap-login100 p-t-50 p-b-90" ng-controller="controladorTarefa">
+          <form class="login100-form validate-form flex-sb flex-w">
+            <span class="login100-form-title p-b-51">
+              Adicionar tarefa
+            </span> 
+
+            <div class="wrap-input100 validate-input m-b-16" data-validate = "Data is required">
+              <input class="input100" type="text" name="identificador" placeholder="Identificador" ng-model="identificador"/>
+              <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-16" data-validate = "Data is required">
+              <input class="input100" type="text" name="morador" placeholder="Morador" ng-model="apelido"/>
+              <span class="focus-input100"></span>
+            </div>              
+  
+            <div class="wrap-input100 validate-input m-b-16" data-validate = "Data is required">
+              <input class="input100" type="text" name="tarefa" placeholder="Tarefa" ng-model="nome"/>
+              <span class="focus-input100"></span>
+            </div>
+
+            <button class="login100-form-btn" ng-click="acessa()">ACESSA</button> &nbsp;
+						<button class="login100-form-btn" ng-click="insere()">INSERE</button> &nbsp;
+          </form>
+
+          <span class="txt2">
+              {{mensagem}}
+          </span>
+          
+
+          <table cellspacing="8">
+            <tr>
+              <th>{{hidentificador}}</th>
+              <th>{{hnome}}</th>
+              <th>{{hapelido}}</th>
+            </tr>
+            <tr ng-repeat="x in task">
+              <td>{{ x.identificador }}</td>
+              <td>{{ x.nome }}</td>
+              <td>{{ x.apelido }}</td>
+
+              <td>
+                <button ng-click="atualiza(x.identificador)">ATUALIZA</button>
+                &nbsp; <button ng-click="remove(x.identificador)">REMOVE</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="container-login100">
+        <div id="consultarTarefas" class="wrap-login100 p-t-50 p-b-90" ng-controller="controladorUsuarioTarefa">
+          <form class="login100-form validate-form flex-sb flex-w">
+            <span class="login100-form-title p-b-51">
+              Consultar tarefas e punições
+            </span> 
+            <button class="login100-form-btn" ng-click="acessa()">ACESSA</button>
+          </form>
+
+      
+
+          <table cellspacing="8">
+            <tr>
+              <th>{{hapelido}}</th>
+              <th>{{hnome}}</th>
+              <th>{{hpunicao}}</th>
+            </tr>
+            <tr ng-repeat="x in userTask">
+              <td>{{ x.apelido }}</td>
+              <td>{{ x.tarefa }}</td>
+              <td>{{ x.punicao }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+
+
+
+      
+      <div class="container-login100">
+        <div id="administrarPunicoes" class="wrap-login100 p-t-50 p-b-90" ng-controller="controladorUsuarioPunicao">
+          <form>
+            <span class="login100-form-title p-b-51">
+                Administrar punições
+            </span>
+
+            <div class="wrap-input100 validate-input m-b-16" data-validate = "Data is required">
+                <input class="input100" type="text" name="apelido" placeholder="Apelido" ng-model="apelido"/>
+                <span class="focus-input100"></span>
+            </div>
+              
+            <button class="login100-form-btn" ng-click="acessa()">ACESSA</button>&nbsp;
+
+          </form>
+
+          <span class="text2">
+              {{mensagem}}
+          </span>
+
+          <table cellspacing="8">
+            <tr>
+              <th>{{hapelido}}</th>
+              <th>{{hpunicao}}</th>
+              <th>{{hadicionar}}</th>
+              <th>{{hremover}}</th>
+            </tr>
+            <tr ng-repeat="x in userPunishment">
+              <td>{{ x.apelido }}</td>
+              <td>{{ x.punicao }}</td>
+              <td>
+                <button class="dvm-button" ng-click="adiciona(x.apelido)">+</button> &nbsp;
+              </td>
+              <td>
+                <button class="dvm-button" ng-click="remove(x.apelido)">-</button> &nbsp;
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+
+      function myFunction() {
+        alert("Você saiu!");
+      }
+
+      var app = angular.module("myApp", []);
+
+      app.controller("controladorMorador", function($scope, $http) {
+        // LOGIN
+        $scope.doLogin = function() {
+          window.open("/authentication", "_blank");
+        };
+
+        // LOGOUT
+        $scope.doLogout = function() {
+          $scope.clear();
+          var request = $http({
+            method: "delete",
+            url: "/authentication"
+          });
+          request.success(function(reply) {
+            $scope.mensagem = reply;
+          });
+        };
+
+        // ACESSA
+        $scope.acessa = function() {
+          var url = "/alunos";
+          if ($scope.ra != undefined) url = "/alunos/" + $scope.ra;
+          var request = $http({
+            method: "get",
+            url: url
+          });
+          request.success(function(reply) {
+            if (reply.alunos != null) {
+              $scope.hra = "RA";
+              $scope.hapelido = "Apelido";
+              $scope.hnome = "Morador";
+              $scope.hcurso = "Curso";
+              $scope.hopcao = "Opções";
+              $scope.mensagem = "";
+              $scope.alunos = reply.alunos;
+            } else {
+              $scope.clear();
+              $scope.mensagem = reply.resultado;
+            }
+          });
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        // INSERE
+        $scope.insere = function() {
+          $scope.clear();
+          if (
+            $scope.ra == undefined ||
+            $scope.ra.length == 0 ||
+            $scope.nome == undefined ||
+            $scope.nome.length == 0 ||
+            $scope.apelido == undefined ||
+            $scope.apelido.length == 0 ||
+            $scope.curso == undefined ||
+            $scope.curso.length == 0
+          ) {
+            $scope.hopcao = "";
+            $scope.clear();
+            $scope.mensagem = "Preencha todos os campos acima!";
+            return;
+          }
+          var data = {
+            ra: $scope.ra,
+            apelido: $scope.apelido,
+            nome: $scope.nome,
+            curso: $scope.curso
+          };
+          var request = $http({
+            method: "post",
+            url: "/alunos",
+            data: data
+          });
+          request.success(function(reply) {
+            $scope.mensagem = reply.resultado;
+          });
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        // ATUALIZA
+        $scope.atualiza = function(ra) {
+          $scope.clear();
+          if (
+            ($scope.nome == undefined || $scope.nome.length == 0) &&
+            ($scope.apelido == undefined || $scope.apelido.length == 0) &&
+            ($scope.curso == undefined || $scope.curso.length == 0)
+          ) {
+            $scope.clear();
+            $scope.mensagem = "Preencha  RA e pelo menos um campo acima";
+            return;
+          }
+          var data = {
+            ra: ra,
+            nome: $scope.nome,
+            apelido: $scope.apelido,
+            curso: $scope.curso
+          };
+          var request = $http({
+            method: "put",
+            url: "/alunos/" + ra,
+            data: data
+          });
+          request.success(function(reply) {
+            $scope.mensagem = reply.resultado;
+          });
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        // REMOVE
+        $scope.remove = function(ra) {
+          $scope.clear();
+          if ($scope.ra == undefined || $scope.ra.length == 0) {
+            $scope.clear();
+            $scope.mensagem = "Preencha o RA do aluno!";
+            return;
+          }
+          var request = $http({
+            method: "delete",
+            url: "/alunos/" + ra
+          });
+          request.success(function(reply) {
+            $scope.mensagem = reply.resultado;
+          });
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        // CLEAR
+        $scope.clear = function() {
+          $scope.alunos = [];
+          $scope.mensagem = "";
+          $scope.hra = $scope.hnome = $scope.hapelido = $scope.hcurso = "";
+        };
+      });
+
+      //----------------------------------------------------------------
+      //----------------------------------------------------------------
+      //----------------------------------------------------------------
+      //----------------------------------------------------------------
+
+      app.controller("controladorTarefa", function($scope, $http) {
+        // ACESSA
+        $scope.acessa = function() {
+          var url = "/task";
+          if ($scope.identificador != undefined)
+            url = "/task/" + $scope.identificador;
+          var request = $http({
+            method: "get",
+            url: url
+          });
+          request.success(function(reply) {
+            if (reply.task != null) {
+              $scope.hidentificador = "Identificador";
+              $scope.hapelido = "Apelido";
+              $scope.hnome = "Tarefa";
+              $scope.mensagem = "";
+              $scope.task = reply.task;
+            } else {
+              $scope.clear();
+              $scope.mensagem = reply.resultado;
+            }
+          });
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        // INSERE
+        $scope.insere = function() {
+          $scope.clear();
+          if (
+            $scope.identificador == undefined ||
+            $scope.identificador.length == 0 ||
+            $scope.nome == undefined ||
+            $scope.nome.length == 0 ||
+            $scope.apelido == undefined ||
+            $scope.apelido.length == 0
+          ) {
+            $scope.clear();
+            $scope.mensagem = "Preencha todos os campos acima!";
+            return;
+          }
+          var data = {
+            identificador: $scope.identificador,
+            apelido: $scope.apelido,
+            nome: $scope.nome
+          };
+          var request = $http({
+            method: "post",
+            url: "/task",
+            data: data
+          });
+          request.success(function(reply) {
+            $scope.mensagem = reply.resultado;
+          });
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        // ATUALIZA
+        $scope.atualiza = function(identificador) {
+          $scope.clear();
+          if (
+            ($scope.nome == undefined || $scope.nome.length == 0) &&
+            ($scope.apelido == undefined || $scope.apelido.length == 0)
+          ) {
+            $scope.clear();
+            $scope.mensagem =
+              "Preencha  identificador e pelo menos um campo acima!";
+            return;
+          }
+          var data = {
+            identificador: identificador,
+            nome: $scope.nome,
+            apelido: $scope.apelido
+          };
+          var request = $http({
+            method: "put",
+            url: "/task/" + identificador,
+            data: data
+          });
+          request.success(function(reply) {
+            $scope.mensagem = reply.resultado;
+          });
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        // REMOVE
+        $scope.remove = function(identificador) {
+          $scope.clear();
+          if (
+            $scope.identificador == undefined ||
+            $scope.identificador.length == 0
+          ) {
+            $scope.clear();
+            $scope.mensagem = "preencha o identificador da tarefa";
+            return;
+          }
+          var request = $http({
+            method: "delete",
+            url: "/task/" + identificador
+          });
+          request.success(function(reply) {
+            $scope.mensagem = reply.resultado;
+          });
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        // CLEAR
+        $scope.clear = function() {
+          $scope.task = [];
+          $scope.mensagem = "";
+          $scope.hidentificador = $scope.hnome = $scope.hapelido = "";
+        };
+      });
+
+      //----------------------------------------------------------------
+      //----------------------------------------------------------------
+
+      app.controller("controladorUsuarioTarefa", function($scope, $http) {
+        // ACESSA
+        $scope.acessa = function() {
+          var url = "/userTask";
+          var request = $http({
+            method: "get",
+            url: url
+          });
+          request.success(function(reply) {
+            if (reply.userTask != null) {
+              $scope.hapelido = "Apelido";
+              $scope.hnome = "Tarefa";
+              $scope.hpunicao = "Punições";
+              $scope.mensagem = "";
+              $scope.userTask = reply.userTask;
+            } else {
+              $scope.clear();
+              $scope.mensagem = reply.resultado;
+            }
+          });
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+      });
+
+      //----------------------------------------------------------------
+      //----------------------------------------------------------------
+      //----------------------------------------------------------------
+      //----------------------------------------------------------------
+
+      app.controller("controladorUsuarioPunicao", function($scope, $http) {
+        //ACESSA
+        $scope.acessa = function() {
+          var url = "/userPunishment";
+
+          if ($scope.apelido != undefined)
+            url = "/userPunishment/" + $scope.apelido;
+          var request = $http({
+            method: "get",
+            url: url
+          });
+
+          request.success(function(reply) {
+            if (reply.userPunishment != null) {
+              $scope.hapelido = "Apelido";
+              $scope.hpunicao = "Punicao";
+              $scope.hadicionar = "Adicionar";
+              $scope.hremover = "Remover";
+              $scope.mensagem = "";
+              $scope.userPunishment = reply.userPunishment;
+            } else {
+              $scope.clear();
+              $scope.mensagem = reply.resultado;
+            }
+          });
+
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        //ADICIONA PUNICAO
+        $scope.adiciona = function(apelido) {
+          var url = "/userPunishment/";
+          var data = { apelido: apelido };
+
+          var request = $http({
+            method: "put",
+            url: url + apelido,
+            data: data
+          });
+
+          request.success(function(reply) {
+            $scope.userPunishment = reply.userPunishment;
+          });
+
+          request.error(function(reply) {
+            alert("Falha na requisicao");
+          });
+        };
+
+        //DELETA PUNICAO
+        $scope.remove = function(apelido) {
+          var url = "/userPunishment/";
+          var data = { apelido: apelido };
+
+          var request = $http({
+            method: "delete",
+            url: url + apelido,
+            data: data
+          });
+
+          request.success(function(reply) {
+            $scope.userPunishment = reply.userPunishment;
+          });
+
+          request.erro(function(error) {
+            alert("falha na requisicao");
+          });
+        };
+      });
+
+    </script>
+  </body>
+</html>
