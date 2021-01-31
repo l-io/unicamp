@@ -1,0 +1,25 @@
+/*
+ * Programa 6
+ * Monica Aoki Faria RA: 156787
+ * Leonardo Rodrigues Marques RA: 178610
+ */
+
+#include "MKL25Z4.h"
+#include "derivative.h" /* include peripheral declarations */
+#include "delay.h"
+#include "lcd.h"
+
+
+int main(void)
+{
+	int counter = 0;
+	
+	
+	
+	
+	for(;;) {	   
+	   	counter++;
+	}
+	
+	return 0;
+}
