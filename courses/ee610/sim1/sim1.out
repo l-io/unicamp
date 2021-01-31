@@ -1,0 +1,185 @@
+
+**** 01/22/21 16:45:59 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Squadra\Desktop\ee610\sim1\sim1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Jan 12 10:55:33 2021
+
+
+
+** Analysis setup **
+.DC LIN V_Vin 2 3 1u 
+.OP 
+.LIB "C:\Users\Squadra\Desktop\ee610\sim1\sim1.lib"
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "sim1.net"
+
+**** INCLUDING sim1.net ****
+* Schematics Netlist *
+
+
+
+V_V2         $N_0001 0 5V
+C_C1         0 Vout  106f  
+V_Vin         $N_0002 0 0V
+M_M1         Vout $N_0002 0 0 MbreakN-X           
+M_M2         Vout $N_0002 $N_0001 $N_0001 Mbreakp           
+
+**** RESUMING sim1.cir ****
+.INC "sim1.als"
+
+
+
+**** INCLUDING sim1.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V2            V2(+=$N_0001 -=0 )
+C_C1            C1(1=0 2=Vout )
+V_Vin           Vin(+=$N_0002 -=0 )
+M_M1            M1(d=Vout g=$N_0002 s=0 s=0 )
+M_M2            M2(d=Vout g=$N_0002 s=$N_0001 s=$N_0001 )
+_    _(Vout=Vout)
+.ENDALIASES
+
+
+**** RESUMING sim1.cir ****
+.probe
+
+
+.END
+
+**** 01/22/21 16:45:59 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Squadra\Desktop\ee610\sim1\sim1.sch
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN-X       Mbreakp         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L    1.000000E-06    1.000000E-06 
+           W    1.000000E-06    2.000000E-06 
+         VTO    1              -1            
+          KP  100.000000E-06   50.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 01/22/21 16:45:59 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Squadra\Desktop\ee610\sim1\sim1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( Vout)    5.0000  ($N_0001)    5.0000                   ($N_0002)    0.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -5.010E-12
+    V_Vin        0.000E+00
+
+    TOTAL POWER DISSIPATION   2.51E-11  WATTS
+
+
+**** 01/22/21 16:45:59 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Squadra\Desktop\ee610\sim1\sim1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M_M1        M_M2      
+MODEL        MbreakN-X   Mbreakp   
+ID           5.01E-12   -5.01E-12 
+VGS          0.00E+00   -5.00E+00 
+VDS          5.00E+00   -1.25E-08 
+VBS          0.00E+00    0.00E+00 
+VTH          1.00E+00   -1.00E+00 
+VDSAT        0.00E+00   -4.00E+00 
+Lin0/Sat1   -1.00E+00   -1.00E+00 
+if          -1.00E+00   -1.00E+00 
+ir          -1.00E+00   -1.00E+00 
+TAU         -1.00E+00   -1.00E+00 
+GM           0.00E+00    1.25E-12 
+GDS          0.00E+00    4.00E-04 
+GMB          0.00E+00    0.00E+00 
+CBD          0.00E+00    0.00E+00 
+CBS          0.00E+00    0.00E+00 
+CGSOV        0.00E+00    0.00E+00 
+CGDOV        0.00E+00    0.00E+00 
+CGBOV        0.00E+00    0.00E+00 
+CGS          0.00E+00    0.00E+00 
+CGD          0.00E+00    0.00E+00 
+CGB          0.00E+00    0.00E+00 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME           23.03
+

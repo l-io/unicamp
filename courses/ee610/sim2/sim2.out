@@ -1,0 +1,250 @@
+
+**** 01/22/21 15:28:49 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Squadra\Desktop\ee610\sim2\sim2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Jan 22 15:28:45 2021
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns 970ns 0.1ps
+.OP 
+.LIB "C:\Users\Squadra\Desktop\ee610\sim1\sim1.lib"
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "sim2.net"
+
+**** INCLUDING sim2.net ****
+* Schematics Netlist *
+
+
+
+C_C1         0 Vout1  106f  
+C_C2         0 Vout2  106f  
+M_M3         Vout2 Vout1 0 0 MbreakN-X           
+M_M4         Vout2 Vout1 $N_0001 $N_0001 Mbreakp           
+M_M1         Vout1 Vout3 0 0 MbreakN-X           
+M_M2         Vout1 Vout3 $N_0001 $N_0001 Mbreakp           
+V_V6         $N_0001 0 5V
+M_M6         Vout3 Vout2 $N_0001 $N_0001 Mbreakp           
+M_M5         Vout3 Vout2 0 0 MbreakN-X           
+C_C3         0 Vout3  106f  
+R_R1         0 Vout3  100Meg  
+
+**** RESUMING sim2.cir ****
+.INC "sim2.als"
+
+
+
+**** INCLUDING sim2.als ****
+* Schematics Aliases *
+
+.ALIASES
+C_C1            C1(1=0 2=Vout1 )
+C_C2            C2(1=0 2=Vout2 )
+M_M3            M3(d=Vout2 g=Vout1 s=0 s=0 )
+M_M4            M4(d=Vout2 g=Vout1 s=$N_0001 s=$N_0001 )
+M_M1            M1(d=Vout1 g=Vout3 s=0 s=0 )
+M_M2            M2(d=Vout1 g=Vout3 s=$N_0001 s=$N_0001 )
+V_V6            V6(+=$N_0001 -=0 )
+M_M6            M6(d=Vout3 g=Vout2 s=$N_0001 s=$N_0001 )
+M_M5            M5(d=Vout3 g=Vout2 s=0 s=0 )
+C_C3            C3(1=0 2=Vout3 )
+R_R1            R1(1=0 2=Vout3 )
+_    _(Vout1=Vout1)
+_    _(Vout2=Vout2)
+_    _(Vout3=Vout3)
+.ENDALIASES
+
+
+**** RESUMING sim2.cir ****
+.probe
+
+
+.END
+
+**** 01/22/21 15:28:49 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Squadra\Desktop\ee610\sim2\sim2.sch
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN-X       Mbreakp         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L    1.000000E-06    1.000000E-06 
+           W    1.000000E-06    2.000000E-06 
+         VTO    1              -1            
+          KP  100.000000E-06   50.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 01/22/21 15:28:49 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Squadra\Desktop\ee610\sim2\sim2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(Vout1)    2.4993  (Vout2)    2.4999  (Vout3)    2.5000  ($N_0001)    5.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -3.376E-04
+
+    TOTAL POWER DISSIPATION   1.69E-03  WATTS
+
+
+**** 01/22/21 15:28:49 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Squadra\Desktop\ee610\sim2\sim2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M_M3        M_M4        M_M1        M_M2        M_M6      
+MODEL        MbreakN-X   Mbreakp     MbreakN-X   Mbreakp     Mbreakp   
+ID           1.12E-04   -1.13E-04    1.13E-04   -1.13E-04   -1.13E-04 
+VGS          2.50E+00   -2.50E+00    2.50E+00   -2.50E+00   -2.50E+00 
+VDS          2.50E+00   -2.50E+00    2.50E+00   -2.50E+00   -2.50E+00 
+VBS          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+VTH          1.00E+00   -1.00E+00    1.00E+00   -1.00E+00   -1.00E+00 
+VDSAT        1.50E+00   -1.50E+00    1.50E+00   -1.50E+00   -1.50E+00 
+Lin0/Sat1   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+if          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+ir          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+TAU         -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+GM           1.50E-04    1.50E-04    1.50E-04    1.50E-04    1.50E-04 
+GDS          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+GMB          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CBD          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CBS          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGSOV        0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGDOV        0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGBOV        0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGS          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGD          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGB          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+
+NAME         M_M5      
+MODEL        MbreakN-X 
+ID           1.12E-04 
+VGS          2.50E+00 
+VDS          2.50E+00 
+VBS          0.00E+00 
+VTH          1.00E+00 
+VDSAT        1.50E+00 
+Lin0/Sat1   -1.00E+00 
+if          -1.00E+00 
+ir          -1.00E+00 
+TAU         -1.00E+00 
+GM           1.50E-04 
+GDS          0.00E+00 
+GMB          0.00E+00 
+CBD          0.00E+00 
+CBS          0.00E+00 
+CGSOV        0.00E+00 
+CGDOV        0.00E+00 
+CGBOV        0.00E+00 
+CGS          0.00E+00 
+CGD          0.00E+00 
+CGB          0.00E+00 
+**** 01/22/21 15:28:49 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Squadra\Desktop\ee610\sim2\sim2.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(Vout1)    2.4993  (Vout2)    2.4999  (Vout3)    2.5000  ($N_0001)    5.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -3.376E-04
+
+    TOTAL POWER DISSIPATION   1.69E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME          120.97
+
