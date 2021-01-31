@@ -1,0 +1,582 @@
+TimeQuest Timing Analyzer report for decoderULA
+Thu Jun 14 12:09:13 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; decoderULA                                                        ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; b[0]       ; Cx          ; 11.382 ; 11.382 ; 11.382 ; 11.382 ;
+; b[0]       ; Cy          ; 11.457 ;        ;        ; 11.457 ;
+; b[0]       ; Zx          ;        ; 11.458 ; 11.458 ;        ;
+; b[0]       ; Zy          ;        ; 12.916 ; 12.916 ;        ;
+; b[0]       ; addc        ;        ; 11.459 ; 11.459 ;        ;
+; b[0]       ; carry_in    ; 12.155 ; 12.155 ; 12.155 ; 12.155 ;
+; b[0]       ; input_one   ;        ; 11.447 ; 11.447 ;        ;
+; b[0]       ; xor         ;        ; 11.363 ; 11.363 ;        ;
+; b[1]       ; Cx          ; 11.861 ;        ;        ; 11.861 ;
+; b[1]       ; Zy          ;        ; 13.384 ; 13.384 ;        ;
+; b[1]       ; addc        ;        ; 11.284 ; 11.284 ;        ;
+; b[1]       ; carry_in    ; 12.631 ; 12.631 ; 12.631 ; 12.631 ;
+; b[1]       ; input_one   ; 11.068 ;        ;        ; 11.068 ;
+; b[2]       ; Cx          ; 11.321 ;        ;        ; 11.321 ;
+; b[2]       ; Cy          ;        ; 10.671 ; 10.671 ;        ;
+; b[2]       ; Zx          ;        ; 10.759 ; 10.759 ;        ;
+; b[2]       ; Zy          ;        ; 12.844 ; 12.844 ;        ;
+; b[2]       ; carry_in    ; 12.091 ; 12.091 ; 12.091 ; 12.091 ;
+; b[2]       ; input_one   ; 10.762 ;        ;        ; 10.762 ;
+; b[3]       ; Cx          ;        ; 11.615 ; 11.615 ;        ;
+; b[3]       ; xor         ;        ; 11.637 ; 11.637 ;        ;
+; b[4]       ; Cy          ;        ; 11.611 ; 11.611 ;        ;
+; b[4]       ; Zy          ;        ; 13.138 ; 13.138 ;        ;
+; b[4]       ; addc        ;        ; 11.623 ; 11.623 ;        ;
+; b[4]       ; carry_in    ;        ; 12.386 ; 12.386 ;        ;
+; b[5]       ; Cx          ;        ; 11.225 ; 11.225 ;        ;
+; b[5]       ; Cy          ;        ; 11.294 ; 11.294 ;        ;
+; b[5]       ; Zx          ;        ; 11.581 ; 11.581 ;        ;
+; b[5]       ; Zy          ;        ; 12.753 ; 12.753 ;        ;
+; b[5]       ; addc        ;        ; 11.307 ; 11.307 ;        ;
+; b[5]       ; carry_in    ;        ; 11.998 ; 11.998 ;        ;
+; b[5]       ; input_one   ;        ; 11.300 ; 11.300 ;        ;
+; b[5]       ; xor         ;        ; 11.245 ; 11.245 ;        ;
+; b[6]       ; Cx          ;        ; 11.115 ; 11.115 ;        ;
+; b[6]       ; Cy          ;        ; 11.184 ; 11.184 ;        ;
+; b[6]       ; Zx          ;        ; 11.471 ; 11.471 ;        ;
+; b[6]       ; Zy          ;        ; 12.643 ; 12.643 ;        ;
+; b[6]       ; addc        ;        ; 11.197 ; 11.197 ;        ;
+; b[6]       ; carry_in    ;        ; 11.888 ; 11.888 ;        ;
+; b[6]       ; input_one   ;        ; 11.190 ; 11.190 ;        ;
+; b[6]       ; xor         ;        ; 11.135 ; 11.135 ;        ;
+; b[7]       ; Cx          ;        ; 10.769 ; 10.769 ;        ;
+; b[7]       ; Cy          ;        ; 10.838 ; 10.838 ;        ;
+; b[7]       ; Zx          ;        ; 11.125 ; 11.125 ;        ;
+; b[7]       ; Zy          ;        ; 12.297 ; 12.297 ;        ;
+; b[7]       ; addc        ;        ; 10.851 ; 10.851 ;        ;
+; b[7]       ; carry_in    ;        ; 11.542 ; 11.542 ;        ;
+; b[7]       ; input_one   ;        ; 10.844 ; 10.844 ;        ;
+; b[7]       ; xor         ;        ; 10.789 ; 10.789 ;        ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; b[0]       ; Cx          ; 11.382 ; 11.382 ; 11.382 ; 11.382 ;
+; b[0]       ; Cy          ; 11.457 ;        ;        ; 11.457 ;
+; b[0]       ; Zx          ;        ; 11.458 ; 11.458 ;        ;
+; b[0]       ; Zy          ;        ; 12.916 ; 12.916 ;        ;
+; b[0]       ; addc        ;        ; 11.459 ; 11.459 ;        ;
+; b[0]       ; carry_in    ; 12.155 ; 12.155 ; 12.155 ; 12.155 ;
+; b[0]       ; input_one   ;        ; 11.447 ; 11.447 ;        ;
+; b[0]       ; xor         ;        ; 11.363 ; 11.363 ;        ;
+; b[1]       ; Cx          ; 11.861 ;        ;        ; 11.861 ;
+; b[1]       ; Zy          ;        ; 13.384 ; 13.384 ;        ;
+; b[1]       ; addc        ;        ; 11.284 ; 11.284 ;        ;
+; b[1]       ; carry_in    ; 12.631 ; 12.631 ; 12.631 ; 12.631 ;
+; b[1]       ; input_one   ; 11.068 ;        ;        ; 11.068 ;
+; b[2]       ; Cx          ; 11.321 ;        ;        ; 11.321 ;
+; b[2]       ; Cy          ;        ; 10.671 ; 10.671 ;        ;
+; b[2]       ; Zx          ;        ; 10.759 ; 10.759 ;        ;
+; b[2]       ; Zy          ;        ; 12.844 ; 12.844 ;        ;
+; b[2]       ; carry_in    ; 12.091 ; 12.091 ; 12.091 ; 12.091 ;
+; b[2]       ; input_one   ; 10.762 ;        ;        ; 10.762 ;
+; b[3]       ; Cx          ;        ; 11.615 ; 11.615 ;        ;
+; b[3]       ; xor         ;        ; 11.637 ; 11.637 ;        ;
+; b[4]       ; Cy          ;        ; 11.611 ; 11.611 ;        ;
+; b[4]       ; Zy          ;        ; 13.138 ; 13.138 ;        ;
+; b[4]       ; addc        ;        ; 11.623 ; 11.623 ;        ;
+; b[4]       ; carry_in    ;        ; 12.386 ; 12.386 ;        ;
+; b[5]       ; Cx          ;        ; 11.225 ; 11.225 ;        ;
+; b[5]       ; Cy          ;        ; 11.294 ; 11.294 ;        ;
+; b[5]       ; Zx          ;        ; 11.581 ; 11.581 ;        ;
+; b[5]       ; Zy          ;        ; 12.753 ; 12.753 ;        ;
+; b[5]       ; addc        ;        ; 11.307 ; 11.307 ;        ;
+; b[5]       ; carry_in    ;        ; 11.998 ; 11.998 ;        ;
+; b[5]       ; input_one   ;        ; 11.300 ; 11.300 ;        ;
+; b[5]       ; xor         ;        ; 11.245 ; 11.245 ;        ;
+; b[6]       ; Cx          ;        ; 11.115 ; 11.115 ;        ;
+; b[6]       ; Cy          ;        ; 11.184 ; 11.184 ;        ;
+; b[6]       ; Zx          ;        ; 11.471 ; 11.471 ;        ;
+; b[6]       ; Zy          ;        ; 12.643 ; 12.643 ;        ;
+; b[6]       ; addc        ;        ; 11.197 ; 11.197 ;        ;
+; b[6]       ; carry_in    ;        ; 11.888 ; 11.888 ;        ;
+; b[6]       ; input_one   ;        ; 11.190 ; 11.190 ;        ;
+; b[6]       ; xor         ;        ; 11.135 ; 11.135 ;        ;
+; b[7]       ; Cx          ;        ; 10.769 ; 10.769 ;        ;
+; b[7]       ; Cy          ;        ; 10.838 ; 10.838 ;        ;
+; b[7]       ; Zx          ;        ; 11.125 ; 11.125 ;        ;
+; b[7]       ; Zy          ;        ; 12.297 ; 12.297 ;        ;
+; b[7]       ; addc        ;        ; 10.851 ; 10.851 ;        ;
+; b[7]       ; carry_in    ;        ; 11.542 ; 11.542 ;        ;
+; b[7]       ; input_one   ;        ; 10.844 ; 10.844 ;        ;
+; b[7]       ; xor         ;        ; 10.789 ; 10.789 ;        ;
++------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; b[0]       ; Cx          ; 5.751 ; 5.751 ; 5.751 ; 5.751 ;
+; b[0]       ; Cy          ; 5.837 ;       ;       ; 5.837 ;
+; b[0]       ; Zx          ;       ; 5.811 ; 5.811 ;       ;
+; b[0]       ; Zy          ;       ; 6.421 ; 6.421 ;       ;
+; b[0]       ; addc        ;       ; 5.817 ; 5.817 ;       ;
+; b[0]       ; carry_in    ; 6.005 ; 6.005 ; 6.005 ; 6.005 ;
+; b[0]       ; input_one   ;       ; 5.805 ; 5.805 ;       ;
+; b[0]       ; xor         ;       ; 5.775 ; 5.775 ;       ;
+; b[1]       ; Cx          ; 5.852 ;       ;       ; 5.852 ;
+; b[1]       ; Zy          ;       ; 6.512 ; 6.512 ;       ;
+; b[1]       ; addc        ;       ; 5.718 ; 5.718 ;       ;
+; b[1]       ; carry_in    ; 6.105 ; 6.105 ; 6.105 ; 6.105 ;
+; b[1]       ; input_one   ; 5.608 ;       ;       ; 5.608 ;
+; b[2]       ; Cx          ; 5.662 ;       ;       ; 5.662 ;
+; b[2]       ; Cy          ;       ; 5.471 ; 5.471 ;       ;
+; b[2]       ; Zx          ;       ; 5.464 ; 5.464 ;       ;
+; b[2]       ; Zy          ;       ; 6.322 ; 6.322 ;       ;
+; b[2]       ; carry_in    ; 5.915 ; 5.915 ; 5.915 ; 5.915 ;
+; b[2]       ; input_one   ; 5.479 ;       ;       ; 5.479 ;
+; b[3]       ; Cx          ;       ; 5.841 ; 5.841 ;       ;
+; b[3]       ; xor         ;       ; 5.859 ; 5.859 ;       ;
+; b[4]       ; Cy          ;       ; 5.888 ; 5.888 ;       ;
+; b[4]       ; Zy          ;       ; 6.494 ; 6.494 ;       ;
+; b[4]       ; addc        ;       ; 5.905 ; 5.905 ;       ;
+; b[4]       ; carry_in    ;       ; 6.089 ; 6.089 ;       ;
+; b[5]       ; Cx          ;       ; 5.646 ; 5.646 ;       ;
+; b[5]       ; Cy          ;       ; 5.698 ; 5.698 ;       ;
+; b[5]       ; Zx          ;       ; 5.817 ; 5.817 ;       ;
+; b[5]       ; Zy          ;       ; 6.307 ; 6.307 ;       ;
+; b[5]       ; addc        ;       ; 5.714 ; 5.714 ;       ;
+; b[5]       ; carry_in    ;       ; 5.899 ; 5.899 ;       ;
+; b[5]       ; input_one   ;       ; 5.707 ; 5.707 ;       ;
+; b[5]       ; xor         ;       ; 5.664 ; 5.664 ;       ;
+; b[6]       ; Cx          ;       ; 5.550 ; 5.550 ;       ;
+; b[6]       ; Cy          ;       ; 5.602 ; 5.602 ;       ;
+; b[6]       ; Zx          ;       ; 5.721 ; 5.721 ;       ;
+; b[6]       ; Zy          ;       ; 6.211 ; 6.211 ;       ;
+; b[6]       ; addc        ;       ; 5.618 ; 5.618 ;       ;
+; b[6]       ; carry_in    ;       ; 5.803 ; 5.803 ;       ;
+; b[6]       ; input_one   ;       ; 5.611 ; 5.611 ;       ;
+; b[6]       ; xor         ;       ; 5.568 ; 5.568 ;       ;
+; b[7]       ; Cx          ;       ; 5.433 ; 5.433 ;       ;
+; b[7]       ; Cy          ;       ; 5.485 ; 5.485 ;       ;
+; b[7]       ; Zx          ;       ; 5.604 ; 5.604 ;       ;
+; b[7]       ; Zy          ;       ; 6.094 ; 6.094 ;       ;
+; b[7]       ; addc        ;       ; 5.501 ; 5.501 ;       ;
+; b[7]       ; carry_in    ;       ; 5.686 ; 5.686 ;       ;
+; b[7]       ; input_one   ;       ; 5.494 ; 5.494 ;       ;
+; b[7]       ; xor         ;       ; 5.451 ; 5.451 ;       ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; b[0]       ; Cx          ; 5.751 ; 5.751 ; 5.751 ; 5.751 ;
+; b[0]       ; Cy          ; 5.837 ;       ;       ; 5.837 ;
+; b[0]       ; Zx          ;       ; 5.811 ; 5.811 ;       ;
+; b[0]       ; Zy          ;       ; 6.421 ; 6.421 ;       ;
+; b[0]       ; addc        ;       ; 5.817 ; 5.817 ;       ;
+; b[0]       ; carry_in    ; 6.005 ; 6.005 ; 6.005 ; 6.005 ;
+; b[0]       ; input_one   ;       ; 5.805 ; 5.805 ;       ;
+; b[0]       ; xor         ;       ; 5.775 ; 5.775 ;       ;
+; b[1]       ; Cx          ; 5.852 ;       ;       ; 5.852 ;
+; b[1]       ; Zy          ;       ; 6.512 ; 6.512 ;       ;
+; b[1]       ; addc        ;       ; 5.718 ; 5.718 ;       ;
+; b[1]       ; carry_in    ; 6.105 ; 6.105 ; 6.105 ; 6.105 ;
+; b[1]       ; input_one   ; 5.608 ;       ;       ; 5.608 ;
+; b[2]       ; Cx          ; 5.662 ;       ;       ; 5.662 ;
+; b[2]       ; Cy          ;       ; 5.471 ; 5.471 ;       ;
+; b[2]       ; Zx          ;       ; 5.464 ; 5.464 ;       ;
+; b[2]       ; Zy          ;       ; 6.322 ; 6.322 ;       ;
+; b[2]       ; carry_in    ; 5.915 ; 5.915 ; 5.915 ; 5.915 ;
+; b[2]       ; input_one   ; 5.479 ;       ;       ; 5.479 ;
+; b[3]       ; Cx          ;       ; 5.841 ; 5.841 ;       ;
+; b[3]       ; xor         ;       ; 5.859 ; 5.859 ;       ;
+; b[4]       ; Cy          ;       ; 5.888 ; 5.888 ;       ;
+; b[4]       ; Zy          ;       ; 6.494 ; 6.494 ;       ;
+; b[4]       ; addc        ;       ; 5.905 ; 5.905 ;       ;
+; b[4]       ; carry_in    ;       ; 6.089 ; 6.089 ;       ;
+; b[5]       ; Cx          ;       ; 5.646 ; 5.646 ;       ;
+; b[5]       ; Cy          ;       ; 5.698 ; 5.698 ;       ;
+; b[5]       ; Zx          ;       ; 5.817 ; 5.817 ;       ;
+; b[5]       ; Zy          ;       ; 6.307 ; 6.307 ;       ;
+; b[5]       ; addc        ;       ; 5.714 ; 5.714 ;       ;
+; b[5]       ; carry_in    ;       ; 5.899 ; 5.899 ;       ;
+; b[5]       ; input_one   ;       ; 5.707 ; 5.707 ;       ;
+; b[5]       ; xor         ;       ; 5.664 ; 5.664 ;       ;
+; b[6]       ; Cx          ;       ; 5.550 ; 5.550 ;       ;
+; b[6]       ; Cy          ;       ; 5.602 ; 5.602 ;       ;
+; b[6]       ; Zx          ;       ; 5.721 ; 5.721 ;       ;
+; b[6]       ; Zy          ;       ; 6.211 ; 6.211 ;       ;
+; b[6]       ; addc        ;       ; 5.618 ; 5.618 ;       ;
+; b[6]       ; carry_in    ;       ; 5.803 ; 5.803 ;       ;
+; b[6]       ; input_one   ;       ; 5.611 ; 5.611 ;       ;
+; b[6]       ; xor         ;       ; 5.568 ; 5.568 ;       ;
+; b[7]       ; Cx          ;       ; 5.433 ; 5.433 ;       ;
+; b[7]       ; Cy          ;       ; 5.485 ; 5.485 ;       ;
+; b[7]       ; Zx          ;       ; 5.604 ; 5.604 ;       ;
+; b[7]       ; Zy          ;       ; 6.094 ; 6.094 ;       ;
+; b[7]       ; addc        ;       ; 5.501 ; 5.501 ;       ;
+; b[7]       ; carry_in    ;       ; 5.686 ; 5.686 ;       ;
+; b[7]       ; input_one   ;       ; 5.494 ; 5.494 ;       ;
+; b[7]       ; xor         ;       ; 5.451 ; 5.451 ;       ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; b[0]       ; Cx          ; 11.382 ; 11.382 ; 11.382 ; 11.382 ;
+; b[0]       ; Cy          ; 11.457 ;        ;        ; 11.457 ;
+; b[0]       ; Zx          ;        ; 11.458 ; 11.458 ;        ;
+; b[0]       ; Zy          ;        ; 12.916 ; 12.916 ;        ;
+; b[0]       ; addc        ;        ; 11.459 ; 11.459 ;        ;
+; b[0]       ; carry_in    ; 12.155 ; 12.155 ; 12.155 ; 12.155 ;
+; b[0]       ; input_one   ;        ; 11.447 ; 11.447 ;        ;
+; b[0]       ; xor         ;        ; 11.363 ; 11.363 ;        ;
+; b[1]       ; Cx          ; 11.861 ;        ;        ; 11.861 ;
+; b[1]       ; Zy          ;        ; 13.384 ; 13.384 ;        ;
+; b[1]       ; addc        ;        ; 11.284 ; 11.284 ;        ;
+; b[1]       ; carry_in    ; 12.631 ; 12.631 ; 12.631 ; 12.631 ;
+; b[1]       ; input_one   ; 11.068 ;        ;        ; 11.068 ;
+; b[2]       ; Cx          ; 11.321 ;        ;        ; 11.321 ;
+; b[2]       ; Cy          ;        ; 10.671 ; 10.671 ;        ;
+; b[2]       ; Zx          ;        ; 10.759 ; 10.759 ;        ;
+; b[2]       ; Zy          ;        ; 12.844 ; 12.844 ;        ;
+; b[2]       ; carry_in    ; 12.091 ; 12.091 ; 12.091 ; 12.091 ;
+; b[2]       ; input_one   ; 10.762 ;        ;        ; 10.762 ;
+; b[3]       ; Cx          ;        ; 11.615 ; 11.615 ;        ;
+; b[3]       ; xor         ;        ; 11.637 ; 11.637 ;        ;
+; b[4]       ; Cy          ;        ; 11.611 ; 11.611 ;        ;
+; b[4]       ; Zy          ;        ; 13.138 ; 13.138 ;        ;
+; b[4]       ; addc        ;        ; 11.623 ; 11.623 ;        ;
+; b[4]       ; carry_in    ;        ; 12.386 ; 12.386 ;        ;
+; b[5]       ; Cx          ;        ; 11.225 ; 11.225 ;        ;
+; b[5]       ; Cy          ;        ; 11.294 ; 11.294 ;        ;
+; b[5]       ; Zx          ;        ; 11.581 ; 11.581 ;        ;
+; b[5]       ; Zy          ;        ; 12.753 ; 12.753 ;        ;
+; b[5]       ; addc        ;        ; 11.307 ; 11.307 ;        ;
+; b[5]       ; carry_in    ;        ; 11.998 ; 11.998 ;        ;
+; b[5]       ; input_one   ;        ; 11.300 ; 11.300 ;        ;
+; b[5]       ; xor         ;        ; 11.245 ; 11.245 ;        ;
+; b[6]       ; Cx          ;        ; 11.115 ; 11.115 ;        ;
+; b[6]       ; Cy          ;        ; 11.184 ; 11.184 ;        ;
+; b[6]       ; Zx          ;        ; 11.471 ; 11.471 ;        ;
+; b[6]       ; Zy          ;        ; 12.643 ; 12.643 ;        ;
+; b[6]       ; addc        ;        ; 11.197 ; 11.197 ;        ;
+; b[6]       ; carry_in    ;        ; 11.888 ; 11.888 ;        ;
+; b[6]       ; input_one   ;        ; 11.190 ; 11.190 ;        ;
+; b[6]       ; xor         ;        ; 11.135 ; 11.135 ;        ;
+; b[7]       ; Cx          ;        ; 10.769 ; 10.769 ;        ;
+; b[7]       ; Cy          ;        ; 10.838 ; 10.838 ;        ;
+; b[7]       ; Zx          ;        ; 11.125 ; 11.125 ;        ;
+; b[7]       ; Zy          ;        ; 12.297 ; 12.297 ;        ;
+; b[7]       ; addc        ;        ; 10.851 ; 10.851 ;        ;
+; b[7]       ; carry_in    ;        ; 11.542 ; 11.542 ;        ;
+; b[7]       ; input_one   ;        ; 10.844 ; 10.844 ;        ;
+; b[7]       ; xor         ;        ; 10.789 ; 10.789 ;        ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; b[0]       ; Cx          ; 5.751 ; 5.751 ; 5.751 ; 5.751 ;
+; b[0]       ; Cy          ; 5.837 ;       ;       ; 5.837 ;
+; b[0]       ; Zx          ;       ; 5.811 ; 5.811 ;       ;
+; b[0]       ; Zy          ;       ; 6.421 ; 6.421 ;       ;
+; b[0]       ; addc        ;       ; 5.817 ; 5.817 ;       ;
+; b[0]       ; carry_in    ; 6.005 ; 6.005 ; 6.005 ; 6.005 ;
+; b[0]       ; input_one   ;       ; 5.805 ; 5.805 ;       ;
+; b[0]       ; xor         ;       ; 5.775 ; 5.775 ;       ;
+; b[1]       ; Cx          ; 5.852 ;       ;       ; 5.852 ;
+; b[1]       ; Zy          ;       ; 6.512 ; 6.512 ;       ;
+; b[1]       ; addc        ;       ; 5.718 ; 5.718 ;       ;
+; b[1]       ; carry_in    ; 6.105 ; 6.105 ; 6.105 ; 6.105 ;
+; b[1]       ; input_one   ; 5.608 ;       ;       ; 5.608 ;
+; b[2]       ; Cx          ; 5.662 ;       ;       ; 5.662 ;
+; b[2]       ; Cy          ;       ; 5.471 ; 5.471 ;       ;
+; b[2]       ; Zx          ;       ; 5.464 ; 5.464 ;       ;
+; b[2]       ; Zy          ;       ; 6.322 ; 6.322 ;       ;
+; b[2]       ; carry_in    ; 5.915 ; 5.915 ; 5.915 ; 5.915 ;
+; b[2]       ; input_one   ; 5.479 ;       ;       ; 5.479 ;
+; b[3]       ; Cx          ;       ; 5.841 ; 5.841 ;       ;
+; b[3]       ; xor         ;       ; 5.859 ; 5.859 ;       ;
+; b[4]       ; Cy          ;       ; 5.888 ; 5.888 ;       ;
+; b[4]       ; Zy          ;       ; 6.494 ; 6.494 ;       ;
+; b[4]       ; addc        ;       ; 5.905 ; 5.905 ;       ;
+; b[4]       ; carry_in    ;       ; 6.089 ; 6.089 ;       ;
+; b[5]       ; Cx          ;       ; 5.646 ; 5.646 ;       ;
+; b[5]       ; Cy          ;       ; 5.698 ; 5.698 ;       ;
+; b[5]       ; Zx          ;       ; 5.817 ; 5.817 ;       ;
+; b[5]       ; Zy          ;       ; 6.307 ; 6.307 ;       ;
+; b[5]       ; addc        ;       ; 5.714 ; 5.714 ;       ;
+; b[5]       ; carry_in    ;       ; 5.899 ; 5.899 ;       ;
+; b[5]       ; input_one   ;       ; 5.707 ; 5.707 ;       ;
+; b[5]       ; xor         ;       ; 5.664 ; 5.664 ;       ;
+; b[6]       ; Cx          ;       ; 5.550 ; 5.550 ;       ;
+; b[6]       ; Cy          ;       ; 5.602 ; 5.602 ;       ;
+; b[6]       ; Zx          ;       ; 5.721 ; 5.721 ;       ;
+; b[6]       ; Zy          ;       ; 6.211 ; 6.211 ;       ;
+; b[6]       ; addc        ;       ; 5.618 ; 5.618 ;       ;
+; b[6]       ; carry_in    ;       ; 5.803 ; 5.803 ;       ;
+; b[6]       ; input_one   ;       ; 5.611 ; 5.611 ;       ;
+; b[6]       ; xor         ;       ; 5.568 ; 5.568 ;       ;
+; b[7]       ; Cx          ;       ; 5.433 ; 5.433 ;       ;
+; b[7]       ; Cy          ;       ; 5.485 ; 5.485 ;       ;
+; b[7]       ; Zx          ;       ; 5.604 ; 5.604 ;       ;
+; b[7]       ; Zy          ;       ; 6.094 ; 6.094 ;       ;
+; b[7]       ; addc        ;       ; 5.501 ; 5.501 ;       ;
+; b[7]       ; carry_in    ;       ; 5.686 ; 5.686 ;       ;
+; b[7]       ; input_one   ;       ; 5.494 ; 5.494 ;       ;
+; b[7]       ; xor         ;       ; 5.451 ; 5.451 ;       ;
++------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 49    ; 49   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 49    ; 49   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Jun 14 12:09:12 2018
+Info: Command: quartus_sta decoderULA -c decoderULA
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'decoderULA.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 506 megabytes
+    Info: Processing ended: Thu Jun 14 12:09:13 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

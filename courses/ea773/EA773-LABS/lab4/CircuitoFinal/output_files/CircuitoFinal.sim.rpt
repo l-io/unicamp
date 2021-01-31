@@ -1,0 +1,759 @@
+Simulator report for CircuitoFinal
+Thu May 17 14:37:56 2018
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 297 nodes    ;
+; Simulation Coverage         ;       1.35 % ;
+; Total Number of Transitions ; 123          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                           ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                         ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                      ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                            ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                             ;               ;
+; Vector input source                                                                        ; /net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab4/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                              ; On            ;
+; Check outputs                                                                              ; Off                                                                             ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                              ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                              ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                              ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                             ; Off           ;
+; Detect glitches                                                                            ; Off                                                                             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                             ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                             ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                            ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       1.35 % ;
+; Total nodes checked                                 ; 297          ;
+; Total output ports checked                          ; 297          ;
+; Total output ports with complete 1/0-value coverage ; 4            ;
+; Total output ports with no 1/0-value coverage       ; 293          ;
+; Total output ports with no 1-value coverage         ; 293          ;
+; Total output ports with no 0-value coverage         ; 293          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                    ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |CircuitoFinal|SW[3] ; |CircuitoFinal|SW[3] ; out              ;
+; |CircuitoFinal|SW[2] ; |CircuitoFinal|SW[2] ; out              ;
+; |CircuitoFinal|SW[1] ; |CircuitoFinal|SW[1] ; out              ;
+; |CircuitoFinal|SW[0] ; |CircuitoFinal|SW[0] ; out              ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                           ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; Node Name                                                      ; Output Port Name                                               ; Output Port Type ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; |CircuitoFinal|A[3]                                            ; |CircuitoFinal|A[3]                                            ; pin_out          ;
+; |CircuitoFinal|A[2]                                            ; |CircuitoFinal|A[2]                                            ; pin_out          ;
+; |CircuitoFinal|A[1]                                            ; |CircuitoFinal|A[1]                                            ; pin_out          ;
+; |CircuitoFinal|A[0]                                            ; |CircuitoFinal|A[0]                                            ; pin_out          ;
+; |CircuitoFinal|SW[9]                                           ; |CircuitoFinal|SW[9]                                           ; out              ;
+; |CircuitoFinal|SW[8]                                           ; |CircuitoFinal|SW[8]                                           ; out              ;
+; |CircuitoFinal|SW[7]                                           ; |CircuitoFinal|SW[7]                                           ; out              ;
+; |CircuitoFinal|SW[6]                                           ; |CircuitoFinal|SW[6]                                           ; out              ;
+; |CircuitoFinal|SW[5]                                           ; |CircuitoFinal|SW[5]                                           ; out              ;
+; |CircuitoFinal|SW[4]                                           ; |CircuitoFinal|SW[4]                                           ; out              ;
+; |CircuitoFinal|D[3]                                            ; |CircuitoFinal|D[3]                                            ; pin_out          ;
+; |CircuitoFinal|D[2]                                            ; |CircuitoFinal|D[2]                                            ; pin_out          ;
+; |CircuitoFinal|D[1]                                            ; |CircuitoFinal|D[1]                                            ; pin_out          ;
+; |CircuitoFinal|D[0]                                            ; |CircuitoFinal|D[0]                                            ; pin_out          ;
+; |CircuitoFinal|Ac[3]                                           ; |CircuitoFinal|Ac[3]                                           ; pin_out          ;
+; |CircuitoFinal|Ac[2]                                           ; |CircuitoFinal|Ac[2]                                           ; pin_out          ;
+; |CircuitoFinal|Ac[1]                                           ; |CircuitoFinal|Ac[1]                                           ; pin_out          ;
+; |CircuitoFinal|Ac[0]                                           ; |CircuitoFinal|Ac[0]                                           ; pin_out          ;
+; |CircuitoFinal|B[3]                                            ; |CircuitoFinal|B[3]                                            ; pin_out          ;
+; |CircuitoFinal|B[2]                                            ; |CircuitoFinal|B[2]                                            ; pin_out          ;
+; |CircuitoFinal|B[1]                                            ; |CircuitoFinal|B[1]                                            ; pin_out          ;
+; |CircuitoFinal|B[0]                                            ; |CircuitoFinal|B[0]                                            ; pin_out          ;
+; |CircuitoFinal|HEX0[0]                                         ; |CircuitoFinal|HEX0[0]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[1]                                         ; |CircuitoFinal|HEX0[1]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[2]                                         ; |CircuitoFinal|HEX0[2]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[3]                                         ; |CircuitoFinal|HEX0[3]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[4]                                         ; |CircuitoFinal|HEX0[4]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[5]                                         ; |CircuitoFinal|HEX0[5]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[6]                                         ; |CircuitoFinal|HEX0[6]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[0]                                         ; |CircuitoFinal|HEX1[0]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[1]                                         ; |CircuitoFinal|HEX1[1]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[2]                                         ; |CircuitoFinal|HEX1[2]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[3]                                         ; |CircuitoFinal|HEX1[3]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[4]                                         ; |CircuitoFinal|HEX1[4]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[5]                                         ; |CircuitoFinal|HEX1[5]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[6]                                         ; |CircuitoFinal|HEX1[6]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[0]                                         ; |CircuitoFinal|HEX2[0]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[1]                                         ; |CircuitoFinal|HEX2[1]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[2]                                         ; |CircuitoFinal|HEX2[2]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[3]                                         ; |CircuitoFinal|HEX2[3]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[4]                                         ; |CircuitoFinal|HEX2[4]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[5]                                         ; |CircuitoFinal|HEX2[5]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[6]                                         ; |CircuitoFinal|HEX2[6]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[0]                                         ; |CircuitoFinal|HEX3[0]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[1]                                         ; |CircuitoFinal|HEX3[1]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[2]                                         ; |CircuitoFinal|HEX3[2]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[3]                                         ; |CircuitoFinal|HEX3[3]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[4]                                         ; |CircuitoFinal|HEX3[4]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[5]                                         ; |CircuitoFinal|HEX3[5]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[6]                                         ; |CircuitoFinal|HEX3[6]                                         ; pin_out          ;
+; |CircuitoFinal|LEDG[3]                                         ; |CircuitoFinal|LEDG[3]                                         ; pin_out          ;
+; |CircuitoFinal|LEDG[2]                                         ; |CircuitoFinal|LEDG[2]                                         ; pin_out          ;
+; |CircuitoFinal|LEDG[1]                                         ; |CircuitoFinal|LEDG[1]                                         ; pin_out          ;
+; |CircuitoFinal|LEDG[0]                                         ; |CircuitoFinal|LEDG[0]                                         ; pin_out          ;
+; |CircuitoFinal|LEDR[3]                                         ; |CircuitoFinal|LEDR[3]                                         ; pin_out          ;
+; |CircuitoFinal|LEDR[2]                                         ; |CircuitoFinal|LEDR[2]                                         ; pin_out          ;
+; |CircuitoFinal|LEDR[1]                                         ; |CircuitoFinal|LEDR[1]                                         ; pin_out          ;
+; |CircuitoFinal|LEDR[0]                                         ; |CircuitoFinal|LEDR[0]                                         ; pin_out          ;
+; |CircuitoFinal|reg4bitsNovo:inst12|inst                        ; |CircuitoFinal|reg4bitsNovo:inst12|inst                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst12|inst1                       ; |CircuitoFinal|reg4bitsNovo:inst12|inst1                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst12|inst2                       ; |CircuitoFinal|reg4bitsNovo:inst12|inst2                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst12|inst3                       ; |CircuitoFinal|reg4bitsNovo:inst12|inst3                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[3] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[3] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[2] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[2] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[1] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[1] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[0] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[0] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[3] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[3] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[2] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[2] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[1] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[1] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[0] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[0] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[3]  ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[2]  ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[1]  ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[0]  ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[0]  ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst9                                 ; |CircuitoFinal|Hex:inst4|inst9                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst5                                 ; |CircuitoFinal|Hex:inst4|inst5                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst7                                 ; |CircuitoFinal|Hex:inst4|inst7                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst8                                 ; |CircuitoFinal|Hex:inst4|inst8                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst6                                 ; |CircuitoFinal|Hex:inst4|inst6                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst10                                ; |CircuitoFinal|Hex:inst4|inst10                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst15                                ; |CircuitoFinal|Hex:inst4|inst15                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst12                                ; |CircuitoFinal|Hex:inst4|inst12                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst13                                ; |CircuitoFinal|Hex:inst4|inst13                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst14                                ; |CircuitoFinal|Hex:inst4|inst14                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst19                                ; |CircuitoFinal|Hex:inst4|inst19                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst17                                ; |CircuitoFinal|Hex:inst4|inst17                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst16                                ; |CircuitoFinal|Hex:inst4|inst16                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst18                                ; |CircuitoFinal|Hex:inst4|inst18                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst20                                ; |CircuitoFinal|Hex:inst4|inst20                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst21                                ; |CircuitoFinal|Hex:inst4|inst21                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst23                                ; |CircuitoFinal|Hex:inst4|inst23                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst24                                ; |CircuitoFinal|Hex:inst4|inst24                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst22                                ; |CircuitoFinal|Hex:inst4|inst22                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst28                                ; |CircuitoFinal|Hex:inst4|inst28                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst26                                ; |CircuitoFinal|Hex:inst4|inst26                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst27                                ; |CircuitoFinal|Hex:inst4|inst27                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst29                                ; |CircuitoFinal|Hex:inst4|inst29                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst34                                ; |CircuitoFinal|Hex:inst4|inst34                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst30                                ; |CircuitoFinal|Hex:inst4|inst30                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst32                                ; |CircuitoFinal|Hex:inst4|inst32                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst33                                ; |CircuitoFinal|Hex:inst4|inst33                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst31                                ; |CircuitoFinal|Hex:inst4|inst31                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst38                                ; |CircuitoFinal|Hex:inst4|inst38                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst36                                ; |CircuitoFinal|Hex:inst4|inst36                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst37                                ; |CircuitoFinal|Hex:inst4|inst37                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst35                                ; |CircuitoFinal|Hex:inst4|inst35                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst9                                 ; |CircuitoFinal|Hex:inst5|inst9                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst5                                 ; |CircuitoFinal|Hex:inst5|inst5                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst7                                 ; |CircuitoFinal|Hex:inst5|inst7                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst8                                 ; |CircuitoFinal|Hex:inst5|inst8                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst6                                 ; |CircuitoFinal|Hex:inst5|inst6                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst10                                ; |CircuitoFinal|Hex:inst5|inst10                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst15                                ; |CircuitoFinal|Hex:inst5|inst15                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst12                                ; |CircuitoFinal|Hex:inst5|inst12                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst13                                ; |CircuitoFinal|Hex:inst5|inst13                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst14                                ; |CircuitoFinal|Hex:inst5|inst14                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst19                                ; |CircuitoFinal|Hex:inst5|inst19                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst17                                ; |CircuitoFinal|Hex:inst5|inst17                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst16                                ; |CircuitoFinal|Hex:inst5|inst16                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst18                                ; |CircuitoFinal|Hex:inst5|inst18                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst20                                ; |CircuitoFinal|Hex:inst5|inst20                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst21                                ; |CircuitoFinal|Hex:inst5|inst21                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst23                                ; |CircuitoFinal|Hex:inst5|inst23                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst24                                ; |CircuitoFinal|Hex:inst5|inst24                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst22                                ; |CircuitoFinal|Hex:inst5|inst22                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst28                                ; |CircuitoFinal|Hex:inst5|inst28                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst26                                ; |CircuitoFinal|Hex:inst5|inst26                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst27                                ; |CircuitoFinal|Hex:inst5|inst27                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst29                                ; |CircuitoFinal|Hex:inst5|inst29                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst34                                ; |CircuitoFinal|Hex:inst5|inst34                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst30                                ; |CircuitoFinal|Hex:inst5|inst30                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst32                                ; |CircuitoFinal|Hex:inst5|inst32                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst33                                ; |CircuitoFinal|Hex:inst5|inst33                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst31                                ; |CircuitoFinal|Hex:inst5|inst31                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst38                                ; |CircuitoFinal|Hex:inst5|inst38                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst36                                ; |CircuitoFinal|Hex:inst5|inst36                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst37                                ; |CircuitoFinal|Hex:inst5|inst37                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst35                                ; |CircuitoFinal|Hex:inst5|inst35                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst9                                 ; |CircuitoFinal|Hex:inst2|inst9                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst5                                 ; |CircuitoFinal|Hex:inst2|inst5                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst7                                 ; |CircuitoFinal|Hex:inst2|inst7                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst8                                 ; |CircuitoFinal|Hex:inst2|inst8                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst6                                 ; |CircuitoFinal|Hex:inst2|inst6                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst10                                ; |CircuitoFinal|Hex:inst2|inst10                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst15                                ; |CircuitoFinal|Hex:inst2|inst15                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst12                                ; |CircuitoFinal|Hex:inst2|inst12                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst13                                ; |CircuitoFinal|Hex:inst2|inst13                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst14                                ; |CircuitoFinal|Hex:inst2|inst14                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst19                                ; |CircuitoFinal|Hex:inst2|inst19                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst17                                ; |CircuitoFinal|Hex:inst2|inst17                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst16                                ; |CircuitoFinal|Hex:inst2|inst16                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst18                                ; |CircuitoFinal|Hex:inst2|inst18                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst20                                ; |CircuitoFinal|Hex:inst2|inst20                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst21                                ; |CircuitoFinal|Hex:inst2|inst21                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst23                                ; |CircuitoFinal|Hex:inst2|inst23                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst24                                ; |CircuitoFinal|Hex:inst2|inst24                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst22                                ; |CircuitoFinal|Hex:inst2|inst22                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst28                                ; |CircuitoFinal|Hex:inst2|inst28                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst26                                ; |CircuitoFinal|Hex:inst2|inst26                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst27                                ; |CircuitoFinal|Hex:inst2|inst27                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst29                                ; |CircuitoFinal|Hex:inst2|inst29                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst34                                ; |CircuitoFinal|Hex:inst2|inst34                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst30                                ; |CircuitoFinal|Hex:inst2|inst30                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst32                                ; |CircuitoFinal|Hex:inst2|inst32                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst33                                ; |CircuitoFinal|Hex:inst2|inst33                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst31                                ; |CircuitoFinal|Hex:inst2|inst31                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst38                                ; |CircuitoFinal|Hex:inst2|inst38                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst36                                ; |CircuitoFinal|Hex:inst2|inst36                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst37                                ; |CircuitoFinal|Hex:inst2|inst37                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst35                                ; |CircuitoFinal|Hex:inst2|inst35                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst9                                 ; |CircuitoFinal|Hex:inst3|inst9                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst5                                 ; |CircuitoFinal|Hex:inst3|inst5                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst7                                 ; |CircuitoFinal|Hex:inst3|inst7                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst8                                 ; |CircuitoFinal|Hex:inst3|inst8                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst6                                 ; |CircuitoFinal|Hex:inst3|inst6                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst10                                ; |CircuitoFinal|Hex:inst3|inst10                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst15                                ; |CircuitoFinal|Hex:inst3|inst15                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst12                                ; |CircuitoFinal|Hex:inst3|inst12                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst13                                ; |CircuitoFinal|Hex:inst3|inst13                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst14                                ; |CircuitoFinal|Hex:inst3|inst14                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst19                                ; |CircuitoFinal|Hex:inst3|inst19                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst17                                ; |CircuitoFinal|Hex:inst3|inst17                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst16                                ; |CircuitoFinal|Hex:inst3|inst16                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst18                                ; |CircuitoFinal|Hex:inst3|inst18                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst20                                ; |CircuitoFinal|Hex:inst3|inst20                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst21                                ; |CircuitoFinal|Hex:inst3|inst21                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst23                                ; |CircuitoFinal|Hex:inst3|inst23                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst24                                ; |CircuitoFinal|Hex:inst3|inst24                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst22                                ; |CircuitoFinal|Hex:inst3|inst22                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst28                                ; |CircuitoFinal|Hex:inst3|inst28                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst26                                ; |CircuitoFinal|Hex:inst3|inst26                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst27                                ; |CircuitoFinal|Hex:inst3|inst27                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst29                                ; |CircuitoFinal|Hex:inst3|inst29                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst34                                ; |CircuitoFinal|Hex:inst3|inst34                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst30                                ; |CircuitoFinal|Hex:inst3|inst30                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst32                                ; |CircuitoFinal|Hex:inst3|inst32                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst33                                ; |CircuitoFinal|Hex:inst3|inst33                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst31                                ; |CircuitoFinal|Hex:inst3|inst31                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst38                                ; |CircuitoFinal|Hex:inst3|inst38                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst36                                ; |CircuitoFinal|Hex:inst3|inst36                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst37                                ; |CircuitoFinal|Hex:inst3|inst37                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst35                                ; |CircuitoFinal|Hex:inst3|inst35                                ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|inst                         ; |CircuitoFinal|reg4bitsNovo:inst8|inst                         ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst8|inst1                        ; |CircuitoFinal|reg4bitsNovo:inst8|inst1                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst8|inst2                        ; |CircuitoFinal|reg4bitsNovo:inst8|inst2                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst8|inst3                        ; |CircuitoFinal|reg4bitsNovo:inst8|inst3                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[3]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[2]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[1]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[0]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[0]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[3]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[2]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[1]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[0]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[0]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[3]   ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[3]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[2]   ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[2]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[1]   ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[1]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[0]   ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[0]   ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst3|inst                 ; |CircuitoFinal|ULA:inst|Complemento:inst3|inst                 ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst3|inst1                ; |CircuitoFinal|ULA:inst|Complemento:inst3|inst1                ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst3|inst2                ; |CircuitoFinal|ULA:inst|Complemento:inst3|inst2                ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst3|inst3                ; |CircuitoFinal|ULA:inst|Complemento:inst3|inst3                ; out0             ;
+; |CircuitoFinal|ULA:inst|Zera:inst5|inst28                      ; |CircuitoFinal|ULA:inst|Zera:inst5|inst28                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Zera:inst5|inst27                      ; |CircuitoFinal|ULA:inst|Zera:inst5|inst27                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Zera:inst5|inst26                      ; |CircuitoFinal|ULA:inst|Zera:inst5|inst26                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Zera:inst5|inst25                      ; |CircuitoFinal|ULA:inst|Zera:inst5|inst25                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst2|inst                 ; |CircuitoFinal|ULA:inst|Complemento:inst2|inst                 ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst2|inst1                ; |CircuitoFinal|ULA:inst|Complemento:inst2|inst1                ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst2|inst2                ; |CircuitoFinal|ULA:inst|Complemento:inst2|inst2                ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst2|inst3                ; |CircuitoFinal|ULA:inst|Complemento:inst2|inst3                ; out0             ;
+; |CircuitoFinal|ULA:inst|Decodificador:inst1|inst20             ; |CircuitoFinal|ULA:inst|Decodificador:inst1|inst20             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst16                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst16                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst15                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst15                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst12                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst12                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst11                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst11                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst8                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst8                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst7                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst7                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst4                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst4                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst3                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst3                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst2                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst2                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst                      ; |CircuitoFinal|ULA:inst|Somador:inst|inst                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst6                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst6                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst5                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst5                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst10                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst10                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst9                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst9                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst14                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst14                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst13                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst13                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst48                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst48                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst54                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst54                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst30|1             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst30|1             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst30|3             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst30|3             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst32|1             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst32|1             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst32|3             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst32|3             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst31|1             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst31|1             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst31|3             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst31|3             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst33|1             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst33|1             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst33|3             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst33|3             ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|inst                        ; |CircuitoFinal|reg4bitsNovo:inst11|inst                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst11|inst1                       ; |CircuitoFinal|reg4bitsNovo:inst11|inst1                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst11|inst2                       ; |CircuitoFinal|reg4bitsNovo:inst11|inst2                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst11|inst3                       ; |CircuitoFinal|reg4bitsNovo:inst11|inst3                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[3] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[3] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[2] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[2] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[1] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[1] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[0] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[0] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[3] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[3] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[2] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[2] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[1] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[1] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[0] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[0] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[3]  ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[2]  ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[1]  ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[0]  ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[0]  ; out0             ;
+; |CircuitoFinal|Tristate4bits:inst9|inst                        ; |CircuitoFinal|Tristate4bits:inst9|inst                        ; out              ;
+; |CircuitoFinal|Tristate4bits:inst9|inst1                       ; |CircuitoFinal|Tristate4bits:inst9|inst1                       ; out              ;
+; |CircuitoFinal|Tristate4bits:inst9|inst2                       ; |CircuitoFinal|Tristate4bits:inst9|inst2                       ; out              ;
+; |CircuitoFinal|Tristate4bits:inst9|inst4                       ; |CircuitoFinal|Tristate4bits:inst9|inst4                       ; out              ;
+; |CircuitoFinal|reg4bitsNovo:inst7|inst                         ; |CircuitoFinal|reg4bitsNovo:inst7|inst                         ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst7|inst1                        ; |CircuitoFinal|reg4bitsNovo:inst7|inst1                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst7|inst2                        ; |CircuitoFinal|reg4bitsNovo:inst7|inst2                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst7|inst3                        ; |CircuitoFinal|reg4bitsNovo:inst7|inst3                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[3]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[2]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[1]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[0]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[0]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[3]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[2]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[1]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[0]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[0]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[3]   ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[3]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[2]   ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[2]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[1]   ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[1]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[0]   ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[0]   ; out0             ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                           ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; Node Name                                                      ; Output Port Name                                               ; Output Port Type ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; |CircuitoFinal|A[3]                                            ; |CircuitoFinal|A[3]                                            ; pin_out          ;
+; |CircuitoFinal|A[2]                                            ; |CircuitoFinal|A[2]                                            ; pin_out          ;
+; |CircuitoFinal|A[1]                                            ; |CircuitoFinal|A[1]                                            ; pin_out          ;
+; |CircuitoFinal|A[0]                                            ; |CircuitoFinal|A[0]                                            ; pin_out          ;
+; |CircuitoFinal|SW[9]                                           ; |CircuitoFinal|SW[9]                                           ; out              ;
+; |CircuitoFinal|SW[8]                                           ; |CircuitoFinal|SW[8]                                           ; out              ;
+; |CircuitoFinal|SW[7]                                           ; |CircuitoFinal|SW[7]                                           ; out              ;
+; |CircuitoFinal|SW[6]                                           ; |CircuitoFinal|SW[6]                                           ; out              ;
+; |CircuitoFinal|SW[5]                                           ; |CircuitoFinal|SW[5]                                           ; out              ;
+; |CircuitoFinal|SW[4]                                           ; |CircuitoFinal|SW[4]                                           ; out              ;
+; |CircuitoFinal|D[3]                                            ; |CircuitoFinal|D[3]                                            ; pin_out          ;
+; |CircuitoFinal|D[2]                                            ; |CircuitoFinal|D[2]                                            ; pin_out          ;
+; |CircuitoFinal|D[1]                                            ; |CircuitoFinal|D[1]                                            ; pin_out          ;
+; |CircuitoFinal|D[0]                                            ; |CircuitoFinal|D[0]                                            ; pin_out          ;
+; |CircuitoFinal|Ac[3]                                           ; |CircuitoFinal|Ac[3]                                           ; pin_out          ;
+; |CircuitoFinal|Ac[2]                                           ; |CircuitoFinal|Ac[2]                                           ; pin_out          ;
+; |CircuitoFinal|Ac[1]                                           ; |CircuitoFinal|Ac[1]                                           ; pin_out          ;
+; |CircuitoFinal|Ac[0]                                           ; |CircuitoFinal|Ac[0]                                           ; pin_out          ;
+; |CircuitoFinal|B[3]                                            ; |CircuitoFinal|B[3]                                            ; pin_out          ;
+; |CircuitoFinal|B[2]                                            ; |CircuitoFinal|B[2]                                            ; pin_out          ;
+; |CircuitoFinal|B[1]                                            ; |CircuitoFinal|B[1]                                            ; pin_out          ;
+; |CircuitoFinal|B[0]                                            ; |CircuitoFinal|B[0]                                            ; pin_out          ;
+; |CircuitoFinal|HEX0[0]                                         ; |CircuitoFinal|HEX0[0]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[1]                                         ; |CircuitoFinal|HEX0[1]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[2]                                         ; |CircuitoFinal|HEX0[2]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[3]                                         ; |CircuitoFinal|HEX0[3]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[4]                                         ; |CircuitoFinal|HEX0[4]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[5]                                         ; |CircuitoFinal|HEX0[5]                                         ; pin_out          ;
+; |CircuitoFinal|HEX0[6]                                         ; |CircuitoFinal|HEX0[6]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[0]                                         ; |CircuitoFinal|HEX1[0]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[1]                                         ; |CircuitoFinal|HEX1[1]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[2]                                         ; |CircuitoFinal|HEX1[2]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[3]                                         ; |CircuitoFinal|HEX1[3]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[4]                                         ; |CircuitoFinal|HEX1[4]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[5]                                         ; |CircuitoFinal|HEX1[5]                                         ; pin_out          ;
+; |CircuitoFinal|HEX1[6]                                         ; |CircuitoFinal|HEX1[6]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[0]                                         ; |CircuitoFinal|HEX2[0]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[1]                                         ; |CircuitoFinal|HEX2[1]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[2]                                         ; |CircuitoFinal|HEX2[2]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[3]                                         ; |CircuitoFinal|HEX2[3]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[4]                                         ; |CircuitoFinal|HEX2[4]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[5]                                         ; |CircuitoFinal|HEX2[5]                                         ; pin_out          ;
+; |CircuitoFinal|HEX2[6]                                         ; |CircuitoFinal|HEX2[6]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[0]                                         ; |CircuitoFinal|HEX3[0]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[1]                                         ; |CircuitoFinal|HEX3[1]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[2]                                         ; |CircuitoFinal|HEX3[2]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[3]                                         ; |CircuitoFinal|HEX3[3]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[4]                                         ; |CircuitoFinal|HEX3[4]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[5]                                         ; |CircuitoFinal|HEX3[5]                                         ; pin_out          ;
+; |CircuitoFinal|HEX3[6]                                         ; |CircuitoFinal|HEX3[6]                                         ; pin_out          ;
+; |CircuitoFinal|LEDG[3]                                         ; |CircuitoFinal|LEDG[3]                                         ; pin_out          ;
+; |CircuitoFinal|LEDG[2]                                         ; |CircuitoFinal|LEDG[2]                                         ; pin_out          ;
+; |CircuitoFinal|LEDG[1]                                         ; |CircuitoFinal|LEDG[1]                                         ; pin_out          ;
+; |CircuitoFinal|LEDG[0]                                         ; |CircuitoFinal|LEDG[0]                                         ; pin_out          ;
+; |CircuitoFinal|LEDR[3]                                         ; |CircuitoFinal|LEDR[3]                                         ; pin_out          ;
+; |CircuitoFinal|LEDR[2]                                         ; |CircuitoFinal|LEDR[2]                                         ; pin_out          ;
+; |CircuitoFinal|LEDR[1]                                         ; |CircuitoFinal|LEDR[1]                                         ; pin_out          ;
+; |CircuitoFinal|LEDR[0]                                         ; |CircuitoFinal|LEDR[0]                                         ; pin_out          ;
+; |CircuitoFinal|reg4bitsNovo:inst12|inst                        ; |CircuitoFinal|reg4bitsNovo:inst12|inst                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst12|inst1                       ; |CircuitoFinal|reg4bitsNovo:inst12|inst1                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst12|inst2                       ; |CircuitoFinal|reg4bitsNovo:inst12|inst2                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst12|inst3                       ; |CircuitoFinal|reg4bitsNovo:inst12|inst3                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[3] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[3] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[2] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[2] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[1] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[1] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[0] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst5[0] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[3] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[3] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[2] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[2] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[1] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[1] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[0] ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst2[0] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[3]  ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[2]  ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[1]  ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[0]  ; |CircuitoFinal|reg4bitsNovo:inst12|enable-clear:inst5|inst[0]  ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst9                                 ; |CircuitoFinal|Hex:inst4|inst9                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst5                                 ; |CircuitoFinal|Hex:inst4|inst5                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst7                                 ; |CircuitoFinal|Hex:inst4|inst7                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst8                                 ; |CircuitoFinal|Hex:inst4|inst8                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst6                                 ; |CircuitoFinal|Hex:inst4|inst6                                 ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst10                                ; |CircuitoFinal|Hex:inst4|inst10                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst15                                ; |CircuitoFinal|Hex:inst4|inst15                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst12                                ; |CircuitoFinal|Hex:inst4|inst12                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst13                                ; |CircuitoFinal|Hex:inst4|inst13                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst14                                ; |CircuitoFinal|Hex:inst4|inst14                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst19                                ; |CircuitoFinal|Hex:inst4|inst19                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst17                                ; |CircuitoFinal|Hex:inst4|inst17                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst16                                ; |CircuitoFinal|Hex:inst4|inst16                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst18                                ; |CircuitoFinal|Hex:inst4|inst18                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst20                                ; |CircuitoFinal|Hex:inst4|inst20                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst21                                ; |CircuitoFinal|Hex:inst4|inst21                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst23                                ; |CircuitoFinal|Hex:inst4|inst23                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst24                                ; |CircuitoFinal|Hex:inst4|inst24                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst22                                ; |CircuitoFinal|Hex:inst4|inst22                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst28                                ; |CircuitoFinal|Hex:inst4|inst28                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst26                                ; |CircuitoFinal|Hex:inst4|inst26                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst27                                ; |CircuitoFinal|Hex:inst4|inst27                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst29                                ; |CircuitoFinal|Hex:inst4|inst29                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst34                                ; |CircuitoFinal|Hex:inst4|inst34                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst30                                ; |CircuitoFinal|Hex:inst4|inst30                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst32                                ; |CircuitoFinal|Hex:inst4|inst32                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst33                                ; |CircuitoFinal|Hex:inst4|inst33                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst31                                ; |CircuitoFinal|Hex:inst4|inst31                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst38                                ; |CircuitoFinal|Hex:inst4|inst38                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst36                                ; |CircuitoFinal|Hex:inst4|inst36                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst37                                ; |CircuitoFinal|Hex:inst4|inst37                                ; out0             ;
+; |CircuitoFinal|Hex:inst4|inst35                                ; |CircuitoFinal|Hex:inst4|inst35                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst9                                 ; |CircuitoFinal|Hex:inst5|inst9                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst5                                 ; |CircuitoFinal|Hex:inst5|inst5                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst7                                 ; |CircuitoFinal|Hex:inst5|inst7                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst8                                 ; |CircuitoFinal|Hex:inst5|inst8                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst6                                 ; |CircuitoFinal|Hex:inst5|inst6                                 ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst10                                ; |CircuitoFinal|Hex:inst5|inst10                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst15                                ; |CircuitoFinal|Hex:inst5|inst15                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst12                                ; |CircuitoFinal|Hex:inst5|inst12                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst13                                ; |CircuitoFinal|Hex:inst5|inst13                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst14                                ; |CircuitoFinal|Hex:inst5|inst14                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst19                                ; |CircuitoFinal|Hex:inst5|inst19                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst17                                ; |CircuitoFinal|Hex:inst5|inst17                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst16                                ; |CircuitoFinal|Hex:inst5|inst16                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst18                                ; |CircuitoFinal|Hex:inst5|inst18                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst20                                ; |CircuitoFinal|Hex:inst5|inst20                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst21                                ; |CircuitoFinal|Hex:inst5|inst21                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst23                                ; |CircuitoFinal|Hex:inst5|inst23                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst24                                ; |CircuitoFinal|Hex:inst5|inst24                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst22                                ; |CircuitoFinal|Hex:inst5|inst22                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst28                                ; |CircuitoFinal|Hex:inst5|inst28                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst26                                ; |CircuitoFinal|Hex:inst5|inst26                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst27                                ; |CircuitoFinal|Hex:inst5|inst27                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst29                                ; |CircuitoFinal|Hex:inst5|inst29                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst34                                ; |CircuitoFinal|Hex:inst5|inst34                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst30                                ; |CircuitoFinal|Hex:inst5|inst30                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst32                                ; |CircuitoFinal|Hex:inst5|inst32                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst33                                ; |CircuitoFinal|Hex:inst5|inst33                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst31                                ; |CircuitoFinal|Hex:inst5|inst31                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst38                                ; |CircuitoFinal|Hex:inst5|inst38                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst36                                ; |CircuitoFinal|Hex:inst5|inst36                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst37                                ; |CircuitoFinal|Hex:inst5|inst37                                ; out0             ;
+; |CircuitoFinal|Hex:inst5|inst35                                ; |CircuitoFinal|Hex:inst5|inst35                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst9                                 ; |CircuitoFinal|Hex:inst2|inst9                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst5                                 ; |CircuitoFinal|Hex:inst2|inst5                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst7                                 ; |CircuitoFinal|Hex:inst2|inst7                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst8                                 ; |CircuitoFinal|Hex:inst2|inst8                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst6                                 ; |CircuitoFinal|Hex:inst2|inst6                                 ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst10                                ; |CircuitoFinal|Hex:inst2|inst10                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst15                                ; |CircuitoFinal|Hex:inst2|inst15                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst12                                ; |CircuitoFinal|Hex:inst2|inst12                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst13                                ; |CircuitoFinal|Hex:inst2|inst13                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst14                                ; |CircuitoFinal|Hex:inst2|inst14                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst19                                ; |CircuitoFinal|Hex:inst2|inst19                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst17                                ; |CircuitoFinal|Hex:inst2|inst17                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst16                                ; |CircuitoFinal|Hex:inst2|inst16                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst18                                ; |CircuitoFinal|Hex:inst2|inst18                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst20                                ; |CircuitoFinal|Hex:inst2|inst20                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst21                                ; |CircuitoFinal|Hex:inst2|inst21                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst23                                ; |CircuitoFinal|Hex:inst2|inst23                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst24                                ; |CircuitoFinal|Hex:inst2|inst24                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst22                                ; |CircuitoFinal|Hex:inst2|inst22                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst28                                ; |CircuitoFinal|Hex:inst2|inst28                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst26                                ; |CircuitoFinal|Hex:inst2|inst26                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst27                                ; |CircuitoFinal|Hex:inst2|inst27                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst29                                ; |CircuitoFinal|Hex:inst2|inst29                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst34                                ; |CircuitoFinal|Hex:inst2|inst34                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst30                                ; |CircuitoFinal|Hex:inst2|inst30                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst32                                ; |CircuitoFinal|Hex:inst2|inst32                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst33                                ; |CircuitoFinal|Hex:inst2|inst33                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst31                                ; |CircuitoFinal|Hex:inst2|inst31                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst38                                ; |CircuitoFinal|Hex:inst2|inst38                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst36                                ; |CircuitoFinal|Hex:inst2|inst36                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst37                                ; |CircuitoFinal|Hex:inst2|inst37                                ; out0             ;
+; |CircuitoFinal|Hex:inst2|inst35                                ; |CircuitoFinal|Hex:inst2|inst35                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst9                                 ; |CircuitoFinal|Hex:inst3|inst9                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst5                                 ; |CircuitoFinal|Hex:inst3|inst5                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst7                                 ; |CircuitoFinal|Hex:inst3|inst7                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst8                                 ; |CircuitoFinal|Hex:inst3|inst8                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst6                                 ; |CircuitoFinal|Hex:inst3|inst6                                 ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst10                                ; |CircuitoFinal|Hex:inst3|inst10                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst15                                ; |CircuitoFinal|Hex:inst3|inst15                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst12                                ; |CircuitoFinal|Hex:inst3|inst12                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst13                                ; |CircuitoFinal|Hex:inst3|inst13                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst14                                ; |CircuitoFinal|Hex:inst3|inst14                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst19                                ; |CircuitoFinal|Hex:inst3|inst19                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst17                                ; |CircuitoFinal|Hex:inst3|inst17                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst16                                ; |CircuitoFinal|Hex:inst3|inst16                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst18                                ; |CircuitoFinal|Hex:inst3|inst18                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst20                                ; |CircuitoFinal|Hex:inst3|inst20                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst21                                ; |CircuitoFinal|Hex:inst3|inst21                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst23                                ; |CircuitoFinal|Hex:inst3|inst23                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst24                                ; |CircuitoFinal|Hex:inst3|inst24                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst22                                ; |CircuitoFinal|Hex:inst3|inst22                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst28                                ; |CircuitoFinal|Hex:inst3|inst28                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst26                                ; |CircuitoFinal|Hex:inst3|inst26                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst27                                ; |CircuitoFinal|Hex:inst3|inst27                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst29                                ; |CircuitoFinal|Hex:inst3|inst29                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst34                                ; |CircuitoFinal|Hex:inst3|inst34                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst30                                ; |CircuitoFinal|Hex:inst3|inst30                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst32                                ; |CircuitoFinal|Hex:inst3|inst32                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst33                                ; |CircuitoFinal|Hex:inst3|inst33                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst31                                ; |CircuitoFinal|Hex:inst3|inst31                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst38                                ; |CircuitoFinal|Hex:inst3|inst38                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst36                                ; |CircuitoFinal|Hex:inst3|inst36                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst37                                ; |CircuitoFinal|Hex:inst3|inst37                                ; out0             ;
+; |CircuitoFinal|Hex:inst3|inst35                                ; |CircuitoFinal|Hex:inst3|inst35                                ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|inst                         ; |CircuitoFinal|reg4bitsNovo:inst8|inst                         ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst8|inst1                        ; |CircuitoFinal|reg4bitsNovo:inst8|inst1                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst8|inst2                        ; |CircuitoFinal|reg4bitsNovo:inst8|inst2                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst8|inst3                        ; |CircuitoFinal|reg4bitsNovo:inst8|inst3                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[3]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[2]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[1]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[0]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst5[0]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[3]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[2]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[1]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[0]  ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst2[0]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[3]   ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[3]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[2]   ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[2]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[1]   ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[1]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[0]   ; |CircuitoFinal|reg4bitsNovo:inst8|enable-clear:inst5|inst[0]   ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst3|inst                 ; |CircuitoFinal|ULA:inst|Complemento:inst3|inst                 ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst3|inst1                ; |CircuitoFinal|ULA:inst|Complemento:inst3|inst1                ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst3|inst2                ; |CircuitoFinal|ULA:inst|Complemento:inst3|inst2                ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst3|inst3                ; |CircuitoFinal|ULA:inst|Complemento:inst3|inst3                ; out0             ;
+; |CircuitoFinal|ULA:inst|Zera:inst5|inst28                      ; |CircuitoFinal|ULA:inst|Zera:inst5|inst28                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Zera:inst5|inst27                      ; |CircuitoFinal|ULA:inst|Zera:inst5|inst27                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Zera:inst5|inst26                      ; |CircuitoFinal|ULA:inst|Zera:inst5|inst26                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Zera:inst5|inst25                      ; |CircuitoFinal|ULA:inst|Zera:inst5|inst25                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst2|inst                 ; |CircuitoFinal|ULA:inst|Complemento:inst2|inst                 ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst2|inst1                ; |CircuitoFinal|ULA:inst|Complemento:inst2|inst1                ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst2|inst2                ; |CircuitoFinal|ULA:inst|Complemento:inst2|inst2                ; out0             ;
+; |CircuitoFinal|ULA:inst|Complemento:inst2|inst3                ; |CircuitoFinal|ULA:inst|Complemento:inst2|inst3                ; out0             ;
+; |CircuitoFinal|ULA:inst|Decodificador:inst1|inst20             ; |CircuitoFinal|ULA:inst|Decodificador:inst1|inst20             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst16                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst16                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst15                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst15                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst12                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst12                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst11                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst11                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst8                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst8                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst7                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst7                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst4                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst4                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst3                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst3                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst2                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst2                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst                      ; |CircuitoFinal|ULA:inst|Somador:inst|inst                      ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst6                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst6                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst5                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst5                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst10                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst10                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst9                     ; |CircuitoFinal|ULA:inst|Somador:inst|inst9                     ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst14                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst14                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst13                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst13                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst48                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst48                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|inst54                    ; |CircuitoFinal|ULA:inst|Somador:inst|inst54                    ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst30|1             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst30|1             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst30|3             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst30|3             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst32|1             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst32|1             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst32|3             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst32|3             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst31|1             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst31|1             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst31|3             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst31|3             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst33|1             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst33|1             ; out0             ;
+; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst33|3             ; |CircuitoFinal|ULA:inst|Somador:inst|xor3:inst33|3             ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|inst                        ; |CircuitoFinal|reg4bitsNovo:inst11|inst                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst11|inst1                       ; |CircuitoFinal|reg4bitsNovo:inst11|inst1                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst11|inst2                       ; |CircuitoFinal|reg4bitsNovo:inst11|inst2                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst11|inst3                       ; |CircuitoFinal|reg4bitsNovo:inst11|inst3                       ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[3] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[3] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[2] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[2] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[1] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[1] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[0] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst5[0] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[3] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[3] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[2] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[2] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[1] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[1] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[0] ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst2[0] ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[3]  ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[2]  ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[1]  ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[0]  ; |CircuitoFinal|reg4bitsNovo:inst11|enable-clear:inst5|inst[0]  ; out0             ;
+; |CircuitoFinal|Tristate4bits:inst9|inst                        ; |CircuitoFinal|Tristate4bits:inst9|inst                        ; out              ;
+; |CircuitoFinal|Tristate4bits:inst9|inst1                       ; |CircuitoFinal|Tristate4bits:inst9|inst1                       ; out              ;
+; |CircuitoFinal|Tristate4bits:inst9|inst2                       ; |CircuitoFinal|Tristate4bits:inst9|inst2                       ; out              ;
+; |CircuitoFinal|Tristate4bits:inst9|inst4                       ; |CircuitoFinal|Tristate4bits:inst9|inst4                       ; out              ;
+; |CircuitoFinal|reg4bitsNovo:inst7|inst                         ; |CircuitoFinal|reg4bitsNovo:inst7|inst                         ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst7|inst1                        ; |CircuitoFinal|reg4bitsNovo:inst7|inst1                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst7|inst2                        ; |CircuitoFinal|reg4bitsNovo:inst7|inst2                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst7|inst3                        ; |CircuitoFinal|reg4bitsNovo:inst7|inst3                        ; regout           ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[3]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[2]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[1]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[0]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst5[0]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[3]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[3]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[2]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[2]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[1]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[1]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[0]  ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst2[0]  ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[3]   ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[3]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[2]   ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[2]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[1]   ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[1]   ; out0             ;
+; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[0]   ; |CircuitoFinal|reg4bitsNovo:inst7|enable-clear:inst5|inst[0]   ; out0             ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu May 17 14:37:55 2018
+Info: Command: quartus_sim --simulation_results_format=VWF CircuitoFinal -c CircuitoFinal
+Info (324025): Using vector source file "/net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab4/Waveform.vwf"
+Warning (328014): Can't find node "KEY[0]" for functional simulation. Ignored vector source file node.
+Warning (328012): Can't find signal in vector source file for input pin "|CircuitoFinal|SW[9]"
+Warning (328012): Can't find signal in vector source file for input pin "|CircuitoFinal|SW[8]"
+Warning (328012): Can't find signal in vector source file for input pin "|CircuitoFinal|SW[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|CircuitoFinal|SW[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|CircuitoFinal|SW[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|CircuitoFinal|SW[4]"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       1.35 %
+Info (328052): Number of transitions in simulation is 123
+Info (324045): Vector file CircuitoFinal.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 278 megabytes
+    Info: Processing ended: Thu May 17 14:37:56 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

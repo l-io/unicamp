@@ -1,0 +1,7 @@
+vendor_name = ModelSim
+source_file = 1, /net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab4/CLEAR/CLEAR.bdf
+source_file = 1, /net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab4/CLEAR/db/CLEAR.cbx.xml
+design_name = CLEAR
+instance = comp, \CLEAR~I\, CLEAR, CLEAR, 1
+instance = comp, \in~I\, in, CLEAR, 1
+instance = comp, \out~I\, out, CLEAR, 1

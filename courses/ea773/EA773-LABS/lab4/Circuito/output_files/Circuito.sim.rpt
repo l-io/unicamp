@@ -1,0 +1,485 @@
+Simulator report for Circuito
+Thu Apr 26 18:31:17 2018
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 255 nodes    ;
+; Simulation Coverage         ;      58.43 % ;
+; Total Number of Transitions ; 910          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                                               ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                                            ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                                                  ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                                                   ;               ;
+; Vector input source                                                                        ; /net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab4/Circuito/output_files/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                                    ; On            ;
+; Check outputs                                                                              ; Off                                                                                                   ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                                                   ; Off           ;
+; Detect glitches                                                                            ; Off                                                                                                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                                                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                                                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                                                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                                            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      58.43 % ;
+; Total nodes checked                                 ; 255          ;
+; Total output ports checked                          ; 255          ;
+; Total output ports with complete 1/0-value coverage ; 149          ;
+; Total output ports with no 1/0-value coverage       ; 68           ;
+; Total output ports with no 1-value coverage         ; 79           ;
+; Total output ports with no 0-value coverage         ; 95           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                      ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |Circuito|A[3]                                ; |Circuito|A[3]                                ; pin_out          ;
+; |Circuito|A[2]                                ; |Circuito|A[2]                                ; pin_out          ;
+; |Circuito|A[1]                                ; |Circuito|A[1]                                ; pin_out          ;
+; |Circuito|A[0]                                ; |Circuito|A[0]                                ; pin_out          ;
+; |Circuito|KEY[2]                              ; |Circuito|KEY[2]                              ; out              ;
+; |Circuito|KEY[1]                              ; |Circuito|KEY[1]                              ; out              ;
+; |Circuito|KEY[0]                              ; |Circuito|KEY[0]                              ; out              ;
+; |Circuito|D[3]                                ; |Circuito|D[3]                                ; pin_out          ;
+; |Circuito|D[2]                                ; |Circuito|D[2]                                ; pin_out          ;
+; |Circuito|D[1]                                ; |Circuito|D[1]                                ; pin_out          ;
+; |Circuito|D[0]                                ; |Circuito|D[0]                                ; pin_out          ;
+; |Circuito|D~0                                 ; |Circuito|D~0                                 ; out0             ;
+; |Circuito|D~1                                 ; |Circuito|D~1                                 ; out0             ;
+; |Circuito|D~2                                 ; |Circuito|D~2                                 ; out0             ;
+; |Circuito|D~3                                 ; |Circuito|D~3                                 ; out0             ;
+; |Circuito|SW[4]                               ; |Circuito|SW[4]                               ; out              ;
+; |Circuito|SW[2]                               ; |Circuito|SW[2]                               ; out              ;
+; |Circuito|SW[1]                               ; |Circuito|SW[1]                               ; out              ;
+; |Circuito|SW[0]                               ; |Circuito|SW[0]                               ; out              ;
+; |Circuito|Ac[3]                               ; |Circuito|Ac[3]                               ; pin_out          ;
+; |Circuito|Ac[2]                               ; |Circuito|Ac[2]                               ; pin_out          ;
+; |Circuito|Ac[1]                               ; |Circuito|Ac[1]                               ; pin_out          ;
+; |Circuito|Ac[0]                               ; |Circuito|Ac[0]                               ; pin_out          ;
+; |Circuito|B[0]                                ; |Circuito|B[0]                                ; pin_out          ;
+; |Circuito|HEX0[0]                             ; |Circuito|HEX0[0]                             ; pin_out          ;
+; |Circuito|HEX0[2]                             ; |Circuito|HEX0[2]                             ; pin_out          ;
+; |Circuito|HEX0[3]                             ; |Circuito|HEX0[3]                             ; pin_out          ;
+; |Circuito|HEX0[4]                             ; |Circuito|HEX0[4]                             ; pin_out          ;
+; |Circuito|HEX0[5]                             ; |Circuito|HEX0[5]                             ; pin_out          ;
+; |Circuito|HEX0[6]                             ; |Circuito|HEX0[6]                             ; pin_out          ;
+; |Circuito|HEX1[0]                             ; |Circuito|HEX1[0]                             ; pin_out          ;
+; |Circuito|HEX1[1]                             ; |Circuito|HEX1[1]                             ; pin_out          ;
+; |Circuito|HEX1[3]                             ; |Circuito|HEX1[3]                             ; pin_out          ;
+; |Circuito|HEX1[6]                             ; |Circuito|HEX1[6]                             ; pin_out          ;
+; |Circuito|HEX2[5]                             ; |Circuito|HEX2[5]                             ; pin_out          ;
+; |Circuito|HEX3[0]                             ; |Circuito|HEX3[0]                             ; pin_out          ;
+; |Circuito|HEX3[1]                             ; |Circuito|HEX3[1]                             ; pin_out          ;
+; |Circuito|HEX3[3]                             ; |Circuito|HEX3[3]                             ; pin_out          ;
+; |Circuito|HEX3[4]                             ; |Circuito|HEX3[4]                             ; pin_out          ;
+; |Circuito|LEDG[3]                             ; |Circuito|LEDG[3]                             ; pin_out          ;
+; |Circuito|LEDG[1]                             ; |Circuito|LEDG[1]                             ; pin_out          ;
+; |Circuito|LEDR[3]                             ; |Circuito|LEDR[3]                             ; pin_out          ;
+; |Circuito|LEDR[2]                             ; |Circuito|LEDR[2]                             ; pin_out          ;
+; |Circuito|LEDR[1]                             ; |Circuito|LEDR[1]                             ; pin_out          ;
+; |Circuito|LEDR[0]                             ; |Circuito|LEDR[0]                             ; pin_out          ;
+; |Circuito|reg4bits:inst8|inst                 ; |Circuito|reg4bits:inst8|inst                 ; regout           ;
+; |Circuito|reg4bits:inst8|inst2                ; |Circuito|reg4bits:inst8|inst2                ; regout           ;
+; |Circuito|Hex:inst4|inst9                     ; |Circuito|Hex:inst4|inst9                     ; out0             ;
+; |Circuito|Hex:inst4|inst7                     ; |Circuito|Hex:inst4|inst7                     ; out0             ;
+; |Circuito|Hex:inst4|inst6                     ; |Circuito|Hex:inst4|inst6                     ; out0             ;
+; |Circuito|Hex:inst4|inst10                    ; |Circuito|Hex:inst4|inst10                    ; out0             ;
+; |Circuito|Hex:inst4|inst13                    ; |Circuito|Hex:inst4|inst13                    ; out0             ;
+; |Circuito|Hex:inst4|inst14                    ; |Circuito|Hex:inst4|inst14                    ; out0             ;
+; |Circuito|Hex:inst4|inst20                    ; |Circuito|Hex:inst4|inst20                    ; out0             ;
+; |Circuito|Hex:inst4|inst23                    ; |Circuito|Hex:inst4|inst23                    ; out0             ;
+; |Circuito|Hex:inst4|inst28                    ; |Circuito|Hex:inst4|inst28                    ; out0             ;
+; |Circuito|Hex:inst4|inst27                    ; |Circuito|Hex:inst4|inst27                    ; out0             ;
+; |Circuito|Hex:inst4|inst29                    ; |Circuito|Hex:inst4|inst29                    ; out0             ;
+; |Circuito|Hex:inst5|inst5                     ; |Circuito|Hex:inst5|inst5                     ; out0             ;
+; |Circuito|Hex:inst5|inst22                    ; |Circuito|Hex:inst5|inst22                    ; out0             ;
+; |Circuito|Hex:inst5|inst26                    ; |Circuito|Hex:inst5|inst26                    ; out0             ;
+; |Circuito|Hex:inst5|inst29                    ; |Circuito|Hex:inst5|inst29                    ; out0             ;
+; |Circuito|Hex:inst5|inst34                    ; |Circuito|Hex:inst5|inst34                    ; out0             ;
+; |Circuito|Hex:inst5|inst30                    ; |Circuito|Hex:inst5|inst30                    ; out0             ;
+; |Circuito|Hex:inst2|inst9                     ; |Circuito|Hex:inst2|inst9                     ; out0             ;
+; |Circuito|Hex:inst2|inst7                     ; |Circuito|Hex:inst2|inst7                     ; out0             ;
+; |Circuito|Hex:inst2|inst6                     ; |Circuito|Hex:inst2|inst6                     ; out0             ;
+; |Circuito|Hex:inst2|inst10                    ; |Circuito|Hex:inst2|inst10                    ; out0             ;
+; |Circuito|Hex:inst2|inst14                    ; |Circuito|Hex:inst2|inst14                    ; out0             ;
+; |Circuito|Hex:inst2|inst20                    ; |Circuito|Hex:inst2|inst20                    ; out0             ;
+; |Circuito|Hex:inst2|inst23                    ; |Circuito|Hex:inst2|inst23                    ; out0             ;
+; |Circuito|Hex:inst2|inst27                    ; |Circuito|Hex:inst2|inst27                    ; out0             ;
+; |Circuito|Hex:inst2|inst30                    ; |Circuito|Hex:inst2|inst30                    ; out0             ;
+; |Circuito|Hex:inst2|inst31                    ; |Circuito|Hex:inst2|inst31                    ; out0             ;
+; |Circuito|Hex:inst2|inst38                    ; |Circuito|Hex:inst2|inst38                    ; out0             ;
+; |Circuito|Hex:inst3|inst9                     ; |Circuito|Hex:inst3|inst9                     ; out0             ;
+; |Circuito|Hex:inst3|inst5                     ; |Circuito|Hex:inst3|inst5                     ; out0             ;
+; |Circuito|Hex:inst3|inst7                     ; |Circuito|Hex:inst3|inst7                     ; out0             ;
+; |Circuito|Hex:inst3|inst6                     ; |Circuito|Hex:inst3|inst6                     ; out0             ;
+; |Circuito|Hex:inst3|inst14                    ; |Circuito|Hex:inst3|inst14                    ; out0             ;
+; |Circuito|Hex:inst3|inst19                    ; |Circuito|Hex:inst3|inst19                    ; out0             ;
+; |Circuito|Hex:inst3|inst16                    ; |Circuito|Hex:inst3|inst16                    ; out0             ;
+; |Circuito|Hex:inst3|inst20                    ; |Circuito|Hex:inst3|inst20                    ; out0             ;
+; |Circuito|Hex:inst3|inst23                    ; |Circuito|Hex:inst3|inst23                    ; out0             ;
+; |Circuito|Hex:inst3|inst22                    ; |Circuito|Hex:inst3|inst22                    ; out0             ;
+; |Circuito|Hex:inst3|inst28                    ; |Circuito|Hex:inst3|inst28                    ; out0             ;
+; |Circuito|Hex:inst3|inst26                    ; |Circuito|Hex:inst3|inst26                    ; out0             ;
+; |Circuito|Hex:inst3|inst27                    ; |Circuito|Hex:inst3|inst27                    ; out0             ;
+; |Circuito|Hex:inst3|inst29                    ; |Circuito|Hex:inst3|inst29                    ; out0             ;
+; |Circuito|Hex:inst3|inst34                    ; |Circuito|Hex:inst3|inst34                    ; out0             ;
+; |Circuito|Hex:inst3|inst30                    ; |Circuito|Hex:inst3|inst30                    ; out0             ;
+; |Circuito|Hex:inst3|inst32                    ; |Circuito|Hex:inst3|inst32                    ; out0             ;
+; |Circuito|Hex:inst3|inst31                    ; |Circuito|Hex:inst3|inst31                    ; out0             ;
+; |Circuito|Hex:inst3|inst38                    ; |Circuito|Hex:inst3|inst38                    ; out0             ;
+; |Circuito|Hex:inst3|inst35                    ; |Circuito|Hex:inst3|inst35                    ; out0             ;
+; |Circuito|reg4bits:inst7|inst3                ; |Circuito|reg4bits:inst7|inst3                ; regout           ;
+; |Circuito|ULA:inst|Complemento:inst3|inst     ; |Circuito|ULA:inst|Complemento:inst3|inst     ; out0             ;
+; |Circuito|ULA:inst|Complemento:inst3|inst1    ; |Circuito|ULA:inst|Complemento:inst3|inst1    ; out0             ;
+; |Circuito|ULA:inst|Complemento:inst3|inst2    ; |Circuito|ULA:inst|Complemento:inst3|inst2    ; out0             ;
+; |Circuito|ULA:inst|Complemento:inst3|inst3    ; |Circuito|ULA:inst|Complemento:inst3|inst3    ; out0             ;
+; |Circuito|ULA:inst|Zera:inst5|inst28          ; |Circuito|ULA:inst|Zera:inst5|inst28          ; out0             ;
+; |Circuito|ULA:inst|Zera:inst5|inst27          ; |Circuito|ULA:inst|Zera:inst5|inst27          ; out0             ;
+; |Circuito|ULA:inst|Zera:inst5|inst26          ; |Circuito|ULA:inst|Zera:inst5|inst26          ; out0             ;
+; |Circuito|ULA:inst|Zera:inst5|inst25          ; |Circuito|ULA:inst|Zera:inst5|inst25          ; out0             ;
+; |Circuito|ULA:inst|Complemento:inst2|inst     ; |Circuito|ULA:inst|Complemento:inst2|inst     ; out0             ;
+; |Circuito|ULA:inst|Complemento:inst2|inst1    ; |Circuito|ULA:inst|Complemento:inst2|inst1    ; out0             ;
+; |Circuito|ULA:inst|Complemento:inst2|inst2    ; |Circuito|ULA:inst|Complemento:inst2|inst2    ; out0             ;
+; |Circuito|ULA:inst|Complemento:inst2|inst3    ; |Circuito|ULA:inst|Complemento:inst2|inst3    ; out0             ;
+; |Circuito|ULA:inst|Decodificador:inst1|inst20 ; |Circuito|ULA:inst|Decodificador:inst1|inst20 ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst16        ; |Circuito|ULA:inst|Somador:inst|inst16        ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst15        ; |Circuito|ULA:inst|Somador:inst|inst15        ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst12        ; |Circuito|ULA:inst|Somador:inst|inst12        ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst11        ; |Circuito|ULA:inst|Somador:inst|inst11        ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst8         ; |Circuito|ULA:inst|Somador:inst|inst8         ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst7         ; |Circuito|ULA:inst|Somador:inst|inst7         ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst4         ; |Circuito|ULA:inst|Somador:inst|inst4         ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst3         ; |Circuito|ULA:inst|Somador:inst|inst3         ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst2         ; |Circuito|ULA:inst|Somador:inst|inst2         ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst          ; |Circuito|ULA:inst|Somador:inst|inst          ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst6         ; |Circuito|ULA:inst|Somador:inst|inst6         ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst5         ; |Circuito|ULA:inst|Somador:inst|inst5         ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst10        ; |Circuito|ULA:inst|Somador:inst|inst10        ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst9         ; |Circuito|ULA:inst|Somador:inst|inst9         ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst14        ; |Circuito|ULA:inst|Somador:inst|inst14        ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst13        ; |Circuito|ULA:inst|Somador:inst|inst13        ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|inst48        ; |Circuito|ULA:inst|Somador:inst|inst48        ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|xor3:inst30|1 ; |Circuito|ULA:inst|Somador:inst|xor3:inst30|1 ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|xor3:inst30|3 ; |Circuito|ULA:inst|Somador:inst|xor3:inst30|3 ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|xor3:inst32|1 ; |Circuito|ULA:inst|Somador:inst|xor3:inst32|1 ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|xor3:inst32|3 ; |Circuito|ULA:inst|Somador:inst|xor3:inst32|3 ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|xor3:inst31|1 ; |Circuito|ULA:inst|Somador:inst|xor3:inst31|1 ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|xor3:inst31|3 ; |Circuito|ULA:inst|Somador:inst|xor3:inst31|3 ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|xor3:inst33|1 ; |Circuito|ULA:inst|Somador:inst|xor3:inst33|1 ; out0             ;
+; |Circuito|ULA:inst|Somador:inst|xor3:inst33|3 ; |Circuito|ULA:inst|Somador:inst|xor3:inst33|3 ; out0             ;
+; |Circuito|reg4bits:inst6|inst                 ; |Circuito|reg4bits:inst6|inst                 ; regout           ;
+; |Circuito|reg4bits:inst6|inst1                ; |Circuito|reg4bits:inst6|inst1                ; regout           ;
+; |Circuito|reg4bits:inst6|inst2                ; |Circuito|reg4bits:inst6|inst2                ; regout           ;
+; |Circuito|reg4bits:inst6|inst3                ; |Circuito|reg4bits:inst6|inst3                ; regout           ;
+; |Circuito|Tristate4bits:inst10|inst           ; |Circuito|Tristate4bits:inst10|inst           ; out              ;
+; |Circuito|Tristate4bits:inst10|inst1          ; |Circuito|Tristate4bits:inst10|inst1          ; out              ;
+; |Circuito|Tristate4bits:inst10|inst2          ; |Circuito|Tristate4bits:inst10|inst2          ; out              ;
+; |Circuito|Tristate4bits:inst10|inst4          ; |Circuito|Tristate4bits:inst10|inst4          ; out              ;
+; |Circuito|Tristate4bits:inst9|inst1           ; |Circuito|Tristate4bits:inst9|inst1           ; out              ;
+; |Circuito|Tristate4bits:inst9|inst2           ; |Circuito|Tristate4bits:inst9|inst2           ; out              ;
+; |Circuito|Tristate4bits:inst9|inst4           ; |Circuito|Tristate4bits:inst9|inst4           ; out              ;
+; |Circuito|reg4bits:inst1|inst                 ; |Circuito|reg4bits:inst1|inst                 ; regout           ;
+; |Circuito|reg4bits:inst1|inst1                ; |Circuito|reg4bits:inst1|inst1                ; regout           ;
+; |Circuito|reg4bits:inst1|inst2                ; |Circuito|reg4bits:inst1|inst2                ; regout           ;
+; |Circuito|reg4bits:inst1|inst3                ; |Circuito|reg4bits:inst1|inst3                ; regout           ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                   ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |Circuito|SW[3]                    ; |Circuito|SW[3]                    ; out              ;
+; |Circuito|B[3]                     ; |Circuito|B[3]                     ; pin_out          ;
+; |Circuito|B[1]                     ; |Circuito|B[1]                     ; pin_out          ;
+; |Circuito|HEX0[1]                  ; |Circuito|HEX0[1]                  ; pin_out          ;
+; |Circuito|HEX1[2]                  ; |Circuito|HEX1[2]                  ; pin_out          ;
+; |Circuito|HEX2[1]                  ; |Circuito|HEX2[1]                  ; pin_out          ;
+; |Circuito|HEX2[2]                  ; |Circuito|HEX2[2]                  ; pin_out          ;
+; |Circuito|HEX2[6]                  ; |Circuito|HEX2[6]                  ; pin_out          ;
+; |Circuito|HEX3[2]                  ; |Circuito|HEX3[2]                  ; pin_out          ;
+; |Circuito|HEX3[6]                  ; |Circuito|HEX3[6]                  ; pin_out          ;
+; |Circuito|LEDG[2]                  ; |Circuito|LEDG[2]                  ; pin_out          ;
+; |Circuito|LEDG[0]                  ; |Circuito|LEDG[0]                  ; pin_out          ;
+; |Circuito|reg4bits:inst8|inst1     ; |Circuito|reg4bits:inst8|inst1     ; regout           ;
+; |Circuito|reg4bits:inst8|inst3     ; |Circuito|reg4bits:inst8|inst3     ; regout           ;
+; |Circuito|Hex:inst4|inst5          ; |Circuito|Hex:inst4|inst5          ; out0             ;
+; |Circuito|Hex:inst4|inst8          ; |Circuito|Hex:inst4|inst8          ; out0             ;
+; |Circuito|Hex:inst4|inst15         ; |Circuito|Hex:inst4|inst15         ; out0             ;
+; |Circuito|Hex:inst4|inst12         ; |Circuito|Hex:inst4|inst12         ; out0             ;
+; |Circuito|Hex:inst4|inst19         ; |Circuito|Hex:inst4|inst19         ; out0             ;
+; |Circuito|Hex:inst4|inst17         ; |Circuito|Hex:inst4|inst17         ; out0             ;
+; |Circuito|Hex:inst4|inst16         ; |Circuito|Hex:inst4|inst16         ; out0             ;
+; |Circuito|Hex:inst4|inst18         ; |Circuito|Hex:inst4|inst18         ; out0             ;
+; |Circuito|Hex:inst4|inst21         ; |Circuito|Hex:inst4|inst21         ; out0             ;
+; |Circuito|Hex:inst4|inst24         ; |Circuito|Hex:inst4|inst24         ; out0             ;
+; |Circuito|Hex:inst4|inst22         ; |Circuito|Hex:inst4|inst22         ; out0             ;
+; |Circuito|Hex:inst4|inst26         ; |Circuito|Hex:inst4|inst26         ; out0             ;
+; |Circuito|Hex:inst4|inst33         ; |Circuito|Hex:inst4|inst33         ; out0             ;
+; |Circuito|Hex:inst4|inst38         ; |Circuito|Hex:inst4|inst38         ; out0             ;
+; |Circuito|Hex:inst4|inst36         ; |Circuito|Hex:inst4|inst36         ; out0             ;
+; |Circuito|Hex:inst4|inst37         ; |Circuito|Hex:inst4|inst37         ; out0             ;
+; |Circuito|Hex:inst4|inst35         ; |Circuito|Hex:inst4|inst35         ; out0             ;
+; |Circuito|Hex:inst5|inst7          ; |Circuito|Hex:inst5|inst7          ; out0             ;
+; |Circuito|Hex:inst5|inst8          ; |Circuito|Hex:inst5|inst8          ; out0             ;
+; |Circuito|Hex:inst5|inst10         ; |Circuito|Hex:inst5|inst10         ; out0             ;
+; |Circuito|Hex:inst5|inst15         ; |Circuito|Hex:inst5|inst15         ; out0             ;
+; |Circuito|Hex:inst5|inst12         ; |Circuito|Hex:inst5|inst12         ; out0             ;
+; |Circuito|Hex:inst5|inst13         ; |Circuito|Hex:inst5|inst13         ; out0             ;
+; |Circuito|Hex:inst5|inst14         ; |Circuito|Hex:inst5|inst14         ; out0             ;
+; |Circuito|Hex:inst5|inst19         ; |Circuito|Hex:inst5|inst19         ; out0             ;
+; |Circuito|Hex:inst5|inst17         ; |Circuito|Hex:inst5|inst17         ; out0             ;
+; |Circuito|Hex:inst5|inst16         ; |Circuito|Hex:inst5|inst16         ; out0             ;
+; |Circuito|Hex:inst5|inst18         ; |Circuito|Hex:inst5|inst18         ; out0             ;
+; |Circuito|Hex:inst5|inst21         ; |Circuito|Hex:inst5|inst21         ; out0             ;
+; |Circuito|Hex:inst5|inst24         ; |Circuito|Hex:inst5|inst24         ; out0             ;
+; |Circuito|Hex:inst5|inst32         ; |Circuito|Hex:inst5|inst32         ; out0             ;
+; |Circuito|Hex:inst5|inst33         ; |Circuito|Hex:inst5|inst33         ; out0             ;
+; |Circuito|Hex:inst5|inst31         ; |Circuito|Hex:inst5|inst31         ; out0             ;
+; |Circuito|Hex:inst5|inst38         ; |Circuito|Hex:inst5|inst38         ; out0             ;
+; |Circuito|Hex:inst5|inst36         ; |Circuito|Hex:inst5|inst36         ; out0             ;
+; |Circuito|Hex:inst5|inst37         ; |Circuito|Hex:inst5|inst37         ; out0             ;
+; |Circuito|Hex:inst5|inst35         ; |Circuito|Hex:inst5|inst35         ; out0             ;
+; |Circuito|Hex:inst2|inst5          ; |Circuito|Hex:inst2|inst5          ; out0             ;
+; |Circuito|Hex:inst2|inst8          ; |Circuito|Hex:inst2|inst8          ; out0             ;
+; |Circuito|Hex:inst2|inst15         ; |Circuito|Hex:inst2|inst15         ; out0             ;
+; |Circuito|Hex:inst2|inst12         ; |Circuito|Hex:inst2|inst12         ; out0             ;
+; |Circuito|Hex:inst2|inst13         ; |Circuito|Hex:inst2|inst13         ; out0             ;
+; |Circuito|Hex:inst2|inst19         ; |Circuito|Hex:inst2|inst19         ; out0             ;
+; |Circuito|Hex:inst2|inst17         ; |Circuito|Hex:inst2|inst17         ; out0             ;
+; |Circuito|Hex:inst2|inst16         ; |Circuito|Hex:inst2|inst16         ; out0             ;
+; |Circuito|Hex:inst2|inst18         ; |Circuito|Hex:inst2|inst18         ; out0             ;
+; |Circuito|Hex:inst2|inst24         ; |Circuito|Hex:inst2|inst24         ; out0             ;
+; |Circuito|Hex:inst2|inst22         ; |Circuito|Hex:inst2|inst22         ; out0             ;
+; |Circuito|Hex:inst2|inst26         ; |Circuito|Hex:inst2|inst26         ; out0             ;
+; |Circuito|Hex:inst2|inst33         ; |Circuito|Hex:inst2|inst33         ; out0             ;
+; |Circuito|Hex:inst2|inst37         ; |Circuito|Hex:inst2|inst37         ; out0             ;
+; |Circuito|Hex:inst2|inst35         ; |Circuito|Hex:inst2|inst35         ; out0             ;
+; |Circuito|Hex:inst3|inst8          ; |Circuito|Hex:inst3|inst8          ; out0             ;
+; |Circuito|Hex:inst3|inst10         ; |Circuito|Hex:inst3|inst10         ; out0             ;
+; |Circuito|Hex:inst3|inst15         ; |Circuito|Hex:inst3|inst15         ; out0             ;
+; |Circuito|Hex:inst3|inst12         ; |Circuito|Hex:inst3|inst12         ; out0             ;
+; |Circuito|Hex:inst3|inst13         ; |Circuito|Hex:inst3|inst13         ; out0             ;
+; |Circuito|Hex:inst3|inst17         ; |Circuito|Hex:inst3|inst17         ; out0             ;
+; |Circuito|Hex:inst3|inst18         ; |Circuito|Hex:inst3|inst18         ; out0             ;
+; |Circuito|Hex:inst3|inst24         ; |Circuito|Hex:inst3|inst24         ; out0             ;
+; |Circuito|Hex:inst3|inst33         ; |Circuito|Hex:inst3|inst33         ; out0             ;
+; |Circuito|Hex:inst3|inst37         ; |Circuito|Hex:inst3|inst37         ; out0             ;
+; |Circuito|reg4bits:inst7|inst      ; |Circuito|reg4bits:inst7|inst      ; regout           ;
+; |Circuito|reg4bits:inst7|inst2     ; |Circuito|reg4bits:inst7|inst2     ; regout           ;
+; |Circuito|Tristate4bits:inst9|inst ; |Circuito|Tristate4bits:inst9|inst ; out              ;
++------------------------------------+------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                           ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |Circuito|SW[3]                        ; |Circuito|SW[3]                        ; out              ;
+; |Circuito|B[3]                         ; |Circuito|B[3]                         ; pin_out          ;
+; |Circuito|B[2]                         ; |Circuito|B[2]                         ; pin_out          ;
+; |Circuito|B[1]                         ; |Circuito|B[1]                         ; pin_out          ;
+; |Circuito|HEX1[2]                      ; |Circuito|HEX1[2]                      ; pin_out          ;
+; |Circuito|HEX1[4]                      ; |Circuito|HEX1[4]                      ; pin_out          ;
+; |Circuito|HEX1[5]                      ; |Circuito|HEX1[5]                      ; pin_out          ;
+; |Circuito|HEX2[0]                      ; |Circuito|HEX2[0]                      ; pin_out          ;
+; |Circuito|HEX2[1]                      ; |Circuito|HEX2[1]                      ; pin_out          ;
+; |Circuito|HEX2[2]                      ; |Circuito|HEX2[2]                      ; pin_out          ;
+; |Circuito|HEX2[3]                      ; |Circuito|HEX2[3]                      ; pin_out          ;
+; |Circuito|HEX2[4]                      ; |Circuito|HEX2[4]                      ; pin_out          ;
+; |Circuito|HEX3[2]                      ; |Circuito|HEX3[2]                      ; pin_out          ;
+; |Circuito|HEX3[5]                      ; |Circuito|HEX3[5]                      ; pin_out          ;
+; |Circuito|LEDG[2]                      ; |Circuito|LEDG[2]                      ; pin_out          ;
+; |Circuito|LEDG[0]                      ; |Circuito|LEDG[0]                      ; pin_out          ;
+; |Circuito|reg4bits:inst8|inst1         ; |Circuito|reg4bits:inst8|inst1         ; regout           ;
+; |Circuito|reg4bits:inst8|inst3         ; |Circuito|reg4bits:inst8|inst3         ; regout           ;
+; |Circuito|Hex:inst4|inst5              ; |Circuito|Hex:inst4|inst5              ; out0             ;
+; |Circuito|Hex:inst4|inst8              ; |Circuito|Hex:inst4|inst8              ; out0             ;
+; |Circuito|Hex:inst4|inst15             ; |Circuito|Hex:inst4|inst15             ; out0             ;
+; |Circuito|Hex:inst4|inst12             ; |Circuito|Hex:inst4|inst12             ; out0             ;
+; |Circuito|Hex:inst4|inst19             ; |Circuito|Hex:inst4|inst19             ; out0             ;
+; |Circuito|Hex:inst4|inst17             ; |Circuito|Hex:inst4|inst17             ; out0             ;
+; |Circuito|Hex:inst4|inst16             ; |Circuito|Hex:inst4|inst16             ; out0             ;
+; |Circuito|Hex:inst4|inst18             ; |Circuito|Hex:inst4|inst18             ; out0             ;
+; |Circuito|Hex:inst4|inst21             ; |Circuito|Hex:inst4|inst21             ; out0             ;
+; |Circuito|Hex:inst4|inst24             ; |Circuito|Hex:inst4|inst24             ; out0             ;
+; |Circuito|Hex:inst4|inst22             ; |Circuito|Hex:inst4|inst22             ; out0             ;
+; |Circuito|Hex:inst4|inst26             ; |Circuito|Hex:inst4|inst26             ; out0             ;
+; |Circuito|Hex:inst4|inst34             ; |Circuito|Hex:inst4|inst34             ; out0             ;
+; |Circuito|Hex:inst4|inst30             ; |Circuito|Hex:inst4|inst30             ; out0             ;
+; |Circuito|Hex:inst4|inst32             ; |Circuito|Hex:inst4|inst32             ; out0             ;
+; |Circuito|Hex:inst4|inst33             ; |Circuito|Hex:inst4|inst33             ; out0             ;
+; |Circuito|Hex:inst4|inst31             ; |Circuito|Hex:inst4|inst31             ; out0             ;
+; |Circuito|Hex:inst4|inst36             ; |Circuito|Hex:inst4|inst36             ; out0             ;
+; |Circuito|Hex:inst4|inst37             ; |Circuito|Hex:inst4|inst37             ; out0             ;
+; |Circuito|Hex:inst5|inst9              ; |Circuito|Hex:inst5|inst9              ; out0             ;
+; |Circuito|Hex:inst5|inst7              ; |Circuito|Hex:inst5|inst7              ; out0             ;
+; |Circuito|Hex:inst5|inst8              ; |Circuito|Hex:inst5|inst8              ; out0             ;
+; |Circuito|Hex:inst5|inst6              ; |Circuito|Hex:inst5|inst6              ; out0             ;
+; |Circuito|Hex:inst5|inst10             ; |Circuito|Hex:inst5|inst10             ; out0             ;
+; |Circuito|Hex:inst5|inst15             ; |Circuito|Hex:inst5|inst15             ; out0             ;
+; |Circuito|Hex:inst5|inst12             ; |Circuito|Hex:inst5|inst12             ; out0             ;
+; |Circuito|Hex:inst5|inst13             ; |Circuito|Hex:inst5|inst13             ; out0             ;
+; |Circuito|Hex:inst5|inst14             ; |Circuito|Hex:inst5|inst14             ; out0             ;
+; |Circuito|Hex:inst5|inst19             ; |Circuito|Hex:inst5|inst19             ; out0             ;
+; |Circuito|Hex:inst5|inst17             ; |Circuito|Hex:inst5|inst17             ; out0             ;
+; |Circuito|Hex:inst5|inst16             ; |Circuito|Hex:inst5|inst16             ; out0             ;
+; |Circuito|Hex:inst5|inst18             ; |Circuito|Hex:inst5|inst18             ; out0             ;
+; |Circuito|Hex:inst5|inst20             ; |Circuito|Hex:inst5|inst20             ; out0             ;
+; |Circuito|Hex:inst5|inst21             ; |Circuito|Hex:inst5|inst21             ; out0             ;
+; |Circuito|Hex:inst5|inst23             ; |Circuito|Hex:inst5|inst23             ; out0             ;
+; |Circuito|Hex:inst5|inst24             ; |Circuito|Hex:inst5|inst24             ; out0             ;
+; |Circuito|Hex:inst5|inst28             ; |Circuito|Hex:inst5|inst28             ; out0             ;
+; |Circuito|Hex:inst5|inst27             ; |Circuito|Hex:inst5|inst27             ; out0             ;
+; |Circuito|Hex:inst5|inst32             ; |Circuito|Hex:inst5|inst32             ; out0             ;
+; |Circuito|Hex:inst5|inst33             ; |Circuito|Hex:inst5|inst33             ; out0             ;
+; |Circuito|Hex:inst5|inst31             ; |Circuito|Hex:inst5|inst31             ; out0             ;
+; |Circuito|Hex:inst5|inst36             ; |Circuito|Hex:inst5|inst36             ; out0             ;
+; |Circuito|Hex:inst5|inst37             ; |Circuito|Hex:inst5|inst37             ; out0             ;
+; |Circuito|Hex:inst2|inst5              ; |Circuito|Hex:inst2|inst5              ; out0             ;
+; |Circuito|Hex:inst2|inst8              ; |Circuito|Hex:inst2|inst8              ; out0             ;
+; |Circuito|Hex:inst2|inst15             ; |Circuito|Hex:inst2|inst15             ; out0             ;
+; |Circuito|Hex:inst2|inst12             ; |Circuito|Hex:inst2|inst12             ; out0             ;
+; |Circuito|Hex:inst2|inst13             ; |Circuito|Hex:inst2|inst13             ; out0             ;
+; |Circuito|Hex:inst2|inst19             ; |Circuito|Hex:inst2|inst19             ; out0             ;
+; |Circuito|Hex:inst2|inst17             ; |Circuito|Hex:inst2|inst17             ; out0             ;
+; |Circuito|Hex:inst2|inst16             ; |Circuito|Hex:inst2|inst16             ; out0             ;
+; |Circuito|Hex:inst2|inst18             ; |Circuito|Hex:inst2|inst18             ; out0             ;
+; |Circuito|Hex:inst2|inst21             ; |Circuito|Hex:inst2|inst21             ; out0             ;
+; |Circuito|Hex:inst2|inst24             ; |Circuito|Hex:inst2|inst24             ; out0             ;
+; |Circuito|Hex:inst2|inst22             ; |Circuito|Hex:inst2|inst22             ; out0             ;
+; |Circuito|Hex:inst2|inst28             ; |Circuito|Hex:inst2|inst28             ; out0             ;
+; |Circuito|Hex:inst2|inst26             ; |Circuito|Hex:inst2|inst26             ; out0             ;
+; |Circuito|Hex:inst2|inst29             ; |Circuito|Hex:inst2|inst29             ; out0             ;
+; |Circuito|Hex:inst2|inst34             ; |Circuito|Hex:inst2|inst34             ; out0             ;
+; |Circuito|Hex:inst2|inst32             ; |Circuito|Hex:inst2|inst32             ; out0             ;
+; |Circuito|Hex:inst2|inst33             ; |Circuito|Hex:inst2|inst33             ; out0             ;
+; |Circuito|Hex:inst2|inst36             ; |Circuito|Hex:inst2|inst36             ; out0             ;
+; |Circuito|Hex:inst2|inst37             ; |Circuito|Hex:inst2|inst37             ; out0             ;
+; |Circuito|Hex:inst3|inst8              ; |Circuito|Hex:inst3|inst8              ; out0             ;
+; |Circuito|Hex:inst3|inst15             ; |Circuito|Hex:inst3|inst15             ; out0             ;
+; |Circuito|Hex:inst3|inst12             ; |Circuito|Hex:inst3|inst12             ; out0             ;
+; |Circuito|Hex:inst3|inst17             ; |Circuito|Hex:inst3|inst17             ; out0             ;
+; |Circuito|Hex:inst3|inst18             ; |Circuito|Hex:inst3|inst18             ; out0             ;
+; |Circuito|Hex:inst3|inst21             ; |Circuito|Hex:inst3|inst21             ; out0             ;
+; |Circuito|Hex:inst3|inst24             ; |Circuito|Hex:inst3|inst24             ; out0             ;
+; |Circuito|Hex:inst3|inst33             ; |Circuito|Hex:inst3|inst33             ; out0             ;
+; |Circuito|Hex:inst3|inst36             ; |Circuito|Hex:inst3|inst36             ; out0             ;
+; |Circuito|Hex:inst3|inst37             ; |Circuito|Hex:inst3|inst37             ; out0             ;
+; |Circuito|reg4bits:inst7|inst          ; |Circuito|reg4bits:inst7|inst          ; regout           ;
+; |Circuito|reg4bits:inst7|inst1         ; |Circuito|reg4bits:inst7|inst1         ; regout           ;
+; |Circuito|reg4bits:inst7|inst2         ; |Circuito|reg4bits:inst7|inst2         ; regout           ;
+; |Circuito|ULA:inst|Somador:inst|inst54 ; |Circuito|ULA:inst|Somador:inst|inst54 ; out0             ;
++----------------------------------------+----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Apr 26 18:31:16 2018
+Info: Command: quartus_sim --simulation_results_format=VWF Circuito -c Circuito
+Info (324025): Using vector source file "/net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab4/Circuito/output_files/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      58.43 %
+Info (328052): Number of transitions in simulation is 910
+Info (324045): Vector file Circuito.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 278 megabytes
+    Info: Processing ended: Thu Apr 26 18:31:17 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

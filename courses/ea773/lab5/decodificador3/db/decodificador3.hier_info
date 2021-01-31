@@ -1,0 +1,38 @@
+|decodificador3
+DA <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+Instr2 => inst6.IN0
+Instr2 => inst.IN0
+Instr2 => inst4.IN0
+Instr2 => inst14.IN0
+Instr1 => inst7.IN0
+Instr1 => inst3.IN1
+Instr1 => inst.IN1
+Instr1 => inst14.IN1
+QA => inst10.IN2
+QA => inst2.IN2
+QA => inst.IN2
+QA => inst9.IN0
+QA => inst14.IN3
+Instr0 => inst3.IN2
+Instr0 => inst8.IN0
+Instr0 => inst5.IN2
+Instr0 => inst16.IN0
+Instr0 => inst18.OE
+Instr0 => inst20.OE
+Instr0 => inst21.OE
+QB => inst3.IN3
+QB => inst13.IN1
+QB => inst12.IN1
+DB <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+Load_CP <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+end_prog2 <= end_prog2~0.DB_MAX_OUTPUT_PORT_TYPE
+end_ext2 => inst19.DATAIN
+end_cont2 => inst18.DATAIN
+end_prog1 <= end_prog1~0.DB_MAX_OUTPUT_PORT_TYPE
+end_ext1 => inst22.DATAIN
+end_cont1 => inst20.DATAIN
+end_prog0 <= end_prog0~0.DB_MAX_OUTPUT_PORT_TYPE
+end_ext0 => inst23.DATAIN
+end_cont0 => inst21.DATAIN
+
+

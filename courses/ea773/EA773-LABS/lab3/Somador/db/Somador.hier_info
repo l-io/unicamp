@@ -1,0 +1,79 @@
+|Somador
+C <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => full-adder:inst18.X
+X[1] => full-adder:inst20.X
+X[1] => full-adder:inst20.Y
+X[2] => full-adder:inst19.X
+X[3] => full-adder:inst17.X
+X[4] => full-adder:inst1.X
+Y[0] => full-adder:inst18.Y
+Y[1] => ~NO_FANOUT~
+Y[2] => full-adder:inst19.Y
+Y[3] => full-adder:inst17.Y
+Y[4] => full-adder:inst1.Y
+carry_in => full-adder:inst18.carry_in
+V <= inst48.DB_MAX_OUTPUT_PORT_TYPE
+N <= full-adder:inst1.S
+S[0] <= full-adder:inst18.S
+S[1] <= full-adder:inst20.S
+S[2] <= full-adder:inst19.S
+S[3] <= full-adder:inst17.S
+S[4] <= full-adder:inst1.S
+Z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|full-adder:inst1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|full-adder:inst17
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|full-adder:inst19
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|full-adder:inst20
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|full-adder:inst18
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+

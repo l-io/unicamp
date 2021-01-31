@@ -1,0 +1,12 @@
+|full-adder
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+S_xor <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+

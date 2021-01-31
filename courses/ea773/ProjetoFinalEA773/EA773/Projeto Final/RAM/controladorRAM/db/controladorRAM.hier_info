@@ -1,0 +1,33 @@
+|controladorRAM
+out[0] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst3[2].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3[3].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst3[4].DB_MAX_OUTPUT_PORT_TYPE
+enable => inst2[4].IN0
+enable => inst2[3].IN0
+enable => inst2[2].IN0
+enable => inst2[1].IN0
+enable => inst2[0].IN0
+W => inst2[4].IN1
+W => inst2[3].IN1
+W => inst2[2].IN1
+W => inst2[1].IN1
+W => inst2[0].IN1
+in[0] => inst2[0].IN2
+in[1] => inst2[1].IN2
+in[2] => inst2[2].IN2
+in[3] => inst2[3].IN2
+in[4] => inst2[4].IN2
+Q[0] => inst[0].IN0
+Q[1] => inst[1].IN0
+Q[2] => inst[2].IN0
+Q[3] => inst[3].IN0
+Q[4] => inst[4].IN0
+R => inst[4].IN1
+R => inst[3].IN1
+R => inst[2].IN1
+R => inst[1].IN1
+R => inst[0].IN1
+
+

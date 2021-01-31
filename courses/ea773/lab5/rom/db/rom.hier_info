@@ -1,0 +1,43 @@
+|rom
+line2 <= decodificador:inst.O1
+addr[0] => decodificador:inst.end[0]
+addr[1] => decodificador:inst.end[1]
+addr[2] => decodificador:inst.end[2]
+line3 <= decodificador:inst.O2
+line4 <= decodificador:inst.O3
+line5 <= decodificador:inst.O4
+line6 <= decodificador:inst.O5
+line7 <= decodificador:inst.O6
+line8 <= decodificador:inst.O7
+line1 <= decodificador:inst.O0
+d_out[0] <= <GND>
+d_out[1] <= <GND>
+d_out[2] <= <GND>
+
+
+|rom|decodificador:inst
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+end[0] => inst12.IN0
+end[0] => inst2.IN2
+end[0] => inst5.IN2
+end[0] => inst7.IN2
+end[0] => inst9.IN2
+end[1] => inst11.IN0
+end[1] => inst4.IN1
+end[1] => inst5.IN1
+end[1] => inst8.IN1
+end[1] => inst9.IN1
+end[2] => inst10.IN0
+end[2] => inst6.IN0
+end[2] => inst7.IN0
+end[2] => inst8.IN0
+end[2] => inst9.IN0
+O1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+O2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+O3 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+O4 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+O5 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+O6 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+O7 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+

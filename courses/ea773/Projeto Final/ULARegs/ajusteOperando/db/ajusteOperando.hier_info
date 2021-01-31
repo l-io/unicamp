@@ -1,0 +1,30 @@
+|ajusteOperando
+OP4_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OP_in[0] => OP_out[0].DATAIN
+OP_in[1] => OP_out[1].DATAIN
+OP_in[2] => OP_out[2].DATAIN
+OP_in[3] => OP_out[3].DATAIN
+OP_in[4] => inst.IN0
+OP_in[4] => inst1.IN0
+OP_in[4] => inst13.OE
+OP_in[4] => inst12.OE
+OP_in[4] => inst15.OE
+OP_in[4] => inst14.OE
+OP_in[4] => inst17.OE
+OP_in[4] => inst16.OE
+OP_in[4] => inst19.OE
+OP_in[4] => inst18.OE
+instr[0] <= instr~7.DB_MAX_OUTPUT_PORT_TYPE
+instr[1] <= instr~6.DB_MAX_OUTPUT_PORT_TYPE
+instr[2] <= instr~5.DB_MAX_OUTPUT_PORT_TYPE
+instr[3] <= instr~4.DB_MAX_OUTPUT_PORT_TYPE
+instr[4] <= instr~0.DB_MAX_OUTPUT_PORT_TYPE
+instr[5] <= instr~3.DB_MAX_OUTPUT_PORT_TYPE
+instr[6] <= instr~2.DB_MAX_OUTPUT_PORT_TYPE
+instr[7] <= instr~1.DB_MAX_OUTPUT_PORT_TYPE
+OP_out[0] <= OP_in[0].DB_MAX_OUTPUT_PORT_TYPE
+OP_out[1] <= OP_in[1].DB_MAX_OUTPUT_PORT_TYPE
+OP_out[2] <= OP_in[2].DB_MAX_OUTPUT_PORT_TYPE
+OP_out[3] <= OP_in[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

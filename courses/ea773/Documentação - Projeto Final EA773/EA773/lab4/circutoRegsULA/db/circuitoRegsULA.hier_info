@@ -1,0 +1,462 @@
+|circuitoRegsULA
+HEX1[0] <= reg4bitsNovo:inst.output[0]
+HEX1[1] <= reg4bitsNovo:inst.output[1]
+HEX1[2] <= reg4bitsNovo:inst.output[2]
+HEX1[3] <= reg4bitsNovo:inst.output[3]
+HEX1[4] <= reg4bitsNovo:inst.output[4]
+enA => reg4bitsNovo:inst.enable
+clear => reg4bitsNovo:inst.clear
+clear => reg4bitsNovo:inst3.clear
+clear => reg4bitsNovo:inst4.clear
+clear => reg4bitsNovo:inst1.clear
+clk => reg4bitsNovo:inst.clk
+clk => reg4bitsNovo:inst3.clk
+clk => reg4bitsNovo:inst4.clk
+clk => reg4bitsNovo:inst1.clk
+HEX3[0] <= reg4bitsNovo:inst3.output[0]
+HEX3[1] <= reg4bitsNovo:inst3.output[1]
+HEX3[2] <= reg4bitsNovo:inst3.output[2]
+HEX3[3] <= reg4bitsNovo:inst3.output[3]
+HEX3[4] <= reg4bitsNovo:inst3.output[4]
+enAc => reg4bitsNovo:inst3.enable
+HEX4[0] <= reg4bitsNovo:inst4.output[0]
+HEX4[1] <= reg4bitsNovo:inst4.output[1]
+HEX4[2] <= reg4bitsNovo:inst4.output[2]
+HEX4[3] <= reg4bitsNovo:inst4.output[3]
+HEX4[4] <= reg4bitsNovo:inst4.output[4]
+enF => reg4bitsNovo:inst4.enable
+b[0] => ULA:inst2.b[0]
+b[1] => ULA:inst2.b[1]
+b[2] => ULA:inst2.b[2]
+b[3] => ULA:inst2.b[3]
+b[4] => ULA:inst2.b[4]
+b[5] => ULA:inst2.b[5]
+b[6] => ULA:inst2.b[6]
+b[7] => ULA:inst2.b[7]
+HEX2[0] <= reg4bitsNovo:inst1.output[0]
+HEX2[1] <= reg4bitsNovo:inst1.output[1]
+HEX2[2] <= reg4bitsNovo:inst1.output[2]
+HEX2[3] <= reg4bitsNovo:inst1.output[3]
+HEX2[4] <= reg4bitsNovo:inst1.output[4]
+enB => reg4bitsNovo:inst1.enable
+
+
+|circuitoRegsULA|reg4bitsNovo:inst
+output[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst7.CLK
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+enable => enable-clear:inst6.ENABLE
+clear => enable-clear:inst6.CLEAR
+input[0] => enable-clear:inst6.input[0]
+input[1] => enable-clear:inst6.input[1]
+input[2] => enable-clear:inst6.input[2]
+input[3] => enable-clear:inst6.input[3]
+input[4] => enable-clear:inst6.input[4]
+
+
+|circuitoRegsULA|reg4bitsNovo:inst|enable-clear:inst6
+D[0] <= inst5[0].DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= inst5[1].DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= inst5[2].DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= inst5[3].DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= inst5[4].DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => inst2[4].IN0
+ENABLE => inst2[3].IN0
+ENABLE => inst2[2].IN0
+ENABLE => inst2[1].IN0
+ENABLE => inst2[0].IN0
+ENABLE => inst3.IN0
+CLEAR => inst4.IN0
+input[0] => inst2[0].IN2
+input[1] => inst2[1].IN2
+input[2] => inst2[2].IN2
+input[3] => inst2[3].IN2
+input[4] => inst2[4].IN2
+Q[0] => inst[0].IN1
+Q[1] => inst[1].IN1
+Q[2] => inst[2].IN1
+Q[3] => inst[3].IN1
+Q[4] => inst[4].IN1
+
+
+|circuitoRegsULA|reg4bitsNovo:inst3
+output[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst7.CLK
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+enable => enable-clear:inst6.ENABLE
+clear => enable-clear:inst6.CLEAR
+input[0] => enable-clear:inst6.input[0]
+input[1] => enable-clear:inst6.input[1]
+input[2] => enable-clear:inst6.input[2]
+input[3] => enable-clear:inst6.input[3]
+input[4] => enable-clear:inst6.input[4]
+
+
+|circuitoRegsULA|reg4bitsNovo:inst3|enable-clear:inst6
+D[0] <= inst5[0].DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= inst5[1].DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= inst5[2].DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= inst5[3].DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= inst5[4].DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => inst2[4].IN0
+ENABLE => inst2[3].IN0
+ENABLE => inst2[2].IN0
+ENABLE => inst2[1].IN0
+ENABLE => inst2[0].IN0
+ENABLE => inst3.IN0
+CLEAR => inst4.IN0
+input[0] => inst2[0].IN2
+input[1] => inst2[1].IN2
+input[2] => inst2[2].IN2
+input[3] => inst2[3].IN2
+input[4] => inst2[4].IN2
+Q[0] => inst[0].IN1
+Q[1] => inst[1].IN1
+Q[2] => inst[2].IN1
+Q[3] => inst[3].IN1
+Q[4] => inst[4].IN1
+
+
+|circuitoRegsULA|ULA:inst2
+C <= Somador:inst2.C
+b[0] => decoderULA:inst1.b[0]
+b[1] => decoderULA:inst1.b[1]
+b[2] => decoderULA:inst1.b[2]
+b[3] => decoderULA:inst1.b[3]
+b[4] => decoderULA:inst1.b[4]
+b[5] => decoderULA:inst1.b[5]
+b[6] => decoderULA:inst1.b[6]
+b[7] => decoderULA:inst1.b[7]
+c_addc => inst11.IN0
+x[0] => input_um:inst3.in[0]
+x[1] => input_um:inst3.in[1]
+x[2] => input_um:inst3.in[2]
+x[3] => input_um:inst3.in[3]
+x[4] => input_um:inst3.in[4]
+y[0] => Complemento:inst10.i[0]
+y[1] => Complemento:inst10.i[1]
+y[2] => Complemento:inst10.i[2]
+y[3] => Complemento:inst10.i[3]
+y[4] => Complemento:inst10.i[4]
+V <= Somador:inst2.V
+N <= Somador:inst2.N
+Z <= Somador:inst2.Z
+S[0] <= Somador:inst2.S_out[0]
+S[1] <= Somador:inst2.S_out[1]
+S[2] <= Somador:inst2.S_out[2]
+S[3] <= Somador:inst2.S_out[3]
+S[4] <= Somador:inst2.S_out[4]
+
+
+|circuitoRegsULA|ULA:inst2|Somador:inst2
+C <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+xor => inst16.IN0
+xor => inst17[4].OE
+xor => inst17[3].OE
+xor => inst17[2].OE
+xor => inst17[1].OE
+xor => inst17[0].OE
+X[0] => full-adder:inst11.X
+X[1] => full-adder:inst9.X
+X[2] => full-adder:inst8.X
+X[3] => full-adder:inst4.X
+X[4] => full-adder:inst3.X
+Y[0] => full-adder:inst11.Y
+Y[1] => full-adder:inst9.Y
+Y[2] => full-adder:inst8.Y
+Y[3] => full-adder:inst4.Y
+Y[4] => full-adder:inst3.Y
+carry_in => full-adder:inst11.carry_in
+V <= inst48.DB_MAX_OUTPUT_PORT_TYPE
+N <= S[4].DB_MAX_OUTPUT_PORT_TYPE
+Z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S_out[0] <= S_out.DB_MAX_OUTPUT_PORT_TYPE
+S_out[1] <= S_out.DB_MAX_OUTPUT_PORT_TYPE
+S_out[2] <= S_out.DB_MAX_OUTPUT_PORT_TYPE
+S_out[3] <= S_out.DB_MAX_OUTPUT_PORT_TYPE
+S_out[4] <= S_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuitoRegsULA|ULA:inst2|Somador:inst2|full-adder:inst3
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+S_xor <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuitoRegsULA|ULA:inst2|Somador:inst2|full-adder:inst4
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+S_xor <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuitoRegsULA|ULA:inst2|Somador:inst2|full-adder:inst8
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+S_xor <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuitoRegsULA|ULA:inst2|Somador:inst2|full-adder:inst9
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+S_xor <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuitoRegsULA|ULA:inst2|Somador:inst2|full-adder:inst11
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst3.IN0
+Y => inst.IN1
+Y => inst3.IN1
+carry_in => inst1.IN1
+carry_in => inst2.IN0
+carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+S_xor <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuitoRegsULA|ULA:inst2|decoderULA:inst1
+Cx <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b[0] => inst15.IN0
+b[0] => inst2.IN1
+b[0] => inst5.IN2
+b[0] => inst28.IN2
+b[0] => inst27.IN2
+b[1] => inst3.IN1
+b[1] => inst14.IN0
+b[1] => inst24.IN1
+b[1] => inst32.IN1
+b[2] => inst3.IN0
+b[2] => inst13.IN0
+b[2] => inst24.IN0
+b[2] => inst32.IN0
+b[3] => inst12.IN0
+b[4] => inst11.IN0
+b[5] => inst1.IN2
+b[6] => inst1.IN1
+b[7] => inst1.IN0
+Cy <= inst61.DB_MAX_OUTPUT_PORT_TYPE
+Zx <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Zy <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+xor <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+input_one <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+carry_in <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+addc <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuitoRegsULA|ULA:inst2|Zera:inst8
+out[0] <= inst28[0].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst28[1].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst28[2].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst28[3].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst28[4].DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst28[0].IN0
+i[1] => inst28[1].IN0
+i[2] => inst28[2].IN0
+i[3] => inst28[3].IN0
+i[4] => inst28[4].IN0
+zerar => inst28[4].IN1
+zerar => inst28[3].IN1
+zerar => inst28[2].IN1
+zerar => inst28[1].IN1
+zerar => inst28[0].IN1
+
+
+|circuitoRegsULA|ULA:inst2|Complemento:inst9
+o[0] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= inst3[2].DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= inst3[3].DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= inst3[4].DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst3[0].IN0
+i[1] => inst3[1].IN0
+i[2] => inst3[2].IN0
+i[3] => inst3[3].IN0
+i[4] => inst3[4].IN0
+complementar => inst3[4].IN1
+complementar => inst3[3].IN1
+complementar => inst3[2].IN1
+complementar => inst3[1].IN1
+complementar => inst3[0].IN1
+
+
+|circuitoRegsULA|ULA:inst2|input_um:inst3
+out[0] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => inst4.IN1
+in[1] => inst.IN0
+in[2] => inst7.IN0
+in[3] => inst9.IN0
+in[4] => inst11.IN0
+in_one => inst12.IN0
+in_one => inst10.IN0
+in_one => inst8.IN0
+in_one => inst6.IN0
+in_one => inst4.IN0
+
+
+|circuitoRegsULA|ULA:inst2|Zera:inst7
+out[0] <= inst28[0].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst28[1].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst28[2].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst28[3].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst28[4].DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst28[0].IN0
+i[1] => inst28[1].IN0
+i[2] => inst28[2].IN0
+i[3] => inst28[3].IN0
+i[4] => inst28[4].IN0
+zerar => inst28[4].IN1
+zerar => inst28[3].IN1
+zerar => inst28[2].IN1
+zerar => inst28[1].IN1
+zerar => inst28[0].IN1
+
+
+|circuitoRegsULA|ULA:inst2|Complemento:inst10
+o[0] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= inst3[2].DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= inst3[3].DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= inst3[4].DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst3[0].IN0
+i[1] => inst3[1].IN0
+i[2] => inst3[2].IN0
+i[3] => inst3[3].IN0
+i[4] => inst3[4].IN0
+complementar => inst3[4].IN1
+complementar => inst3[3].IN1
+complementar => inst3[2].IN1
+complementar => inst3[1].IN1
+complementar => inst3[0].IN1
+
+
+|circuitoRegsULA|reg4bitsNovo:inst4
+output[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst7.CLK
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+enable => enable-clear:inst6.ENABLE
+clear => enable-clear:inst6.CLEAR
+input[0] => enable-clear:inst6.input[0]
+input[1] => enable-clear:inst6.input[1]
+input[2] => enable-clear:inst6.input[2]
+input[3] => enable-clear:inst6.input[3]
+input[4] => enable-clear:inst6.input[4]
+
+
+|circuitoRegsULA|reg4bitsNovo:inst4|enable-clear:inst6
+D[0] <= inst5[0].DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= inst5[1].DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= inst5[2].DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= inst5[3].DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= inst5[4].DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => inst2[4].IN0
+ENABLE => inst2[3].IN0
+ENABLE => inst2[2].IN0
+ENABLE => inst2[1].IN0
+ENABLE => inst2[0].IN0
+ENABLE => inst3.IN0
+CLEAR => inst4.IN0
+input[0] => inst2[0].IN2
+input[1] => inst2[1].IN2
+input[2] => inst2[2].IN2
+input[3] => inst2[3].IN2
+input[4] => inst2[4].IN2
+Q[0] => inst[0].IN1
+Q[1] => inst[1].IN1
+Q[2] => inst[2].IN1
+Q[3] => inst[3].IN1
+Q[4] => inst[4].IN1
+
+
+|circuitoRegsULA|reg4bitsNovo:inst1
+output[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst7.CLK
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+enable => enable-clear:inst6.ENABLE
+clear => enable-clear:inst6.CLEAR
+input[0] => enable-clear:inst6.input[0]
+input[1] => enable-clear:inst6.input[1]
+input[2] => enable-clear:inst6.input[2]
+input[3] => enable-clear:inst6.input[3]
+input[4] => enable-clear:inst6.input[4]
+
+
+|circuitoRegsULA|reg4bitsNovo:inst1|enable-clear:inst6
+D[0] <= inst5[0].DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= inst5[1].DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= inst5[2].DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= inst5[3].DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= inst5[4].DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => inst2[4].IN0
+ENABLE => inst2[3].IN0
+ENABLE => inst2[2].IN0
+ENABLE => inst2[1].IN0
+ENABLE => inst2[0].IN0
+ENABLE => inst3.IN0
+CLEAR => inst4.IN0
+input[0] => inst2[0].IN2
+input[1] => inst2[1].IN2
+input[2] => inst2[2].IN2
+input[3] => inst2[3].IN2
+input[4] => inst2[4].IN2
+Q[0] => inst[0].IN1
+Q[1] => inst[1].IN1
+Q[2] => inst[2].IN1
+Q[3] => inst[3].IN1
+Q[4] => inst[4].IN1
+
+

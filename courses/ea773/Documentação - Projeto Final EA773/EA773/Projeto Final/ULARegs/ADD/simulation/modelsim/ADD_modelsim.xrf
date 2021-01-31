@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, /home/leonardo/EA773/Projeto Final/ULARegs/ADD/ADD.bdf
+source_file = 1, /home/leonardo/EA773/Projeto Final/ULARegs/ADD/db/ADD.cbx.xml
+design_name = ADD
+instance = comp, \ADD[7]~I\, ADD[7], ADD, 1
+instance = comp, \ADD[6]~I\, ADD[6], ADD, 1
+instance = comp, \ADD[5]~I\, ADD[5], ADD, 1
+instance = comp, \ADD[4]~I\, ADD[4], ADD, 1
+instance = comp, \ADD[3]~I\, ADD[3], ADD, 1
+instance = comp, \ADD[2]~I\, ADD[2], ADD, 1
+instance = comp, \ADD[1]~I\, ADD[1], ADD, 1
+instance = comp, \ADD[0]~I\, ADD[0], ADD, 1

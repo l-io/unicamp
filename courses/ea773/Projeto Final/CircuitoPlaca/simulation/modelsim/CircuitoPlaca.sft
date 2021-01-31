@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {CircuitoPlaca.vho CircuitoPlaca_vhd.sdo}}
+	{{"Fast Model"} {CircuitoPlaca_fast.vho CircuitoPlaca_vhd_fast.sdo}}
+}
