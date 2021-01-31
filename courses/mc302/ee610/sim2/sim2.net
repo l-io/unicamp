@@ -1,0 +1,15 @@
+* Schematics Netlist *
+
+
+
+C_C1         0 Vout1  106f  
+C_C2         0 Vout2  106f  
+M_M3         Vout2 Vout1 0 0 MbreakN-X           
+M_M4         Vout2 Vout1 $N_0001 $N_0001 Mbreakp           
+M_M1         Vout1 Vout3 0 0 MbreakN-X           
+M_M2         Vout1 Vout3 $N_0001 $N_0001 Mbreakp           
+V_V6         $N_0001 0 5V
+M_M6         Vout3 Vout2 $N_0001 $N_0001 Mbreakp           
+M_M5         Vout3 Vout2 0 0 MbreakN-X           
+C_C3         0 Vout3  106f  
+R_R1         0 Vout3  100Meg  

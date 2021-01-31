@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.button {
+			background-color: lightblue;
+			border: none;
+			color: black;
+			padding: 15px 32px;
+			border-radius: 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		P.blocktext {
+    		margin-left: auto;
+    		margin-right: auto;
+    		width: 6em;
+		}
+		.div1{
+        	float: left;
+			width: 50%; 
+			height: auto;
+			background-image: url("");
+		}
+		.div2{
+			float: right;
+			width: 50%; 
+			height: auto;
+			background-color: url("");
+		}
+		/* Style the tab */
+		.tab {
+		   	overflow: hidden;
+			border: 1px solid #ccc;
+		   	background-color: #f1f1f1;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+		    background-color: inherit;
+		    float: left;
+		    border: none;
+		    outline: none;
+		    cursor: pointer;
+		    padding: 14px 16px;
+		    transition: 0.3s;
+		    font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+		    background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+		    background-color: #ccc;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		    display: none;
+		    padding: 6px 12px;
+		    border-top: none;
+		}
+
+	</style>
+		
+	<title>CareBox</title>
+	<center>
+		<div style="background-color: lightblue; padding: 24px" w >
+			<font style="color: blue" size="7">CareBox</font>
+		</div>
+	</center>
+</head>	
+
+<body>
+<!-- Tabs configuration -->
+	<div class="tab">
+	  <button class="tablinks" onclick="openCity(event, 'Informações Gerais') "id = "defaultOpen">Informações Gerais</button>
+	  <button class="tablinks" onclick="openCity(event, 'Alterar remédios')">Alterar remédios</button>
+	  <button class="tablinks" onclick="openCity(event, 'Histórico')">Histórico</button>
+	</div>
+
+	<div id="Informações Gerais" class="tabcontent">
+	  	<h3>Informações Gerais</h3>
+	 	<div class = "div1">
+			<form oninput="">	
+	 	  		Remedio: 
+	  	 		<output name = ""><br>
+				Quantos tem:
+	  	 		<output name = ""><br>
+	  	 		Quantos atrasaram:
+	  	 		<output name = ""><br>
+	  	 		Proximo horario:
+	  	 		<output name = ""><br>
+	  	 		<br><br>	
+	  	 	</form>	
+	 	</div>
+	 	<div class = "div2">
+			<form oninput="">	
+	 	  		Remedio:
+	  	 		<output name = ""><br>
+				Quantos tem:
+	  	 		<output name = ""><br>
+	  	 		Quantos atrasaram:
+	  	 		<output name = ""><br>
+	  	 		Proximo horario:
+	  	 		<output name = ""><br>	
+	  	 		<br><br>
+	  	 	</form>	
+	 	</div>
+		<div class = "div1">
+			<form oninput="">	
+	 	  		Remedio:
+	  	 		<output name = ""><br>
+				Quantos tem:
+	  	 		<output name = ""><br>
+	  	 		Quantos atrasaram:
+	  	 		<output name = ""><br>
+	  	 		Proximo horario:
+	  	 		<output name = ""><br>
+	  	 		<br><br>	
+	  	 	</form>	
+	 	</div>
+	 	<div class = "div2">
+			<form oninput="">	
+	 	  		Remedio:
+	  	 		<output name = ""><br>
+				Quantos tem:
+	  	 		<output name = ""><br>
+	  	 		Quantos atrasaram:
+	  	 		<output name = ""><br>
+	  	 		Proximo horario:
+	  	 		<output name = ""><br>
+	  	 		<br><br>	
+	  	 	</form>	
+	 	</div>
+	</div>
+
+	<div id="Alterar remédios" class="tabcontent">
+	  <center>
+			<div class = "div1">
+				<form name="input" action="secondPage.html">
+					Nome do remédio:<br>
+					<input type="text" name="nomeRemdio" value="Remedio"><br>
+					Tomar de quantas em quantas horas:<br>
+					<input type="text" name="horasTomar" value="Periodo"><br>
+					Primeiro horário a tomar o remédio:<br>
+					<input type="text" name="aPartir" value="Horario"><br>
+					Quantas unidades foram acrescentadas:<br>
+					<input type="text" name="qntdade" value="qntdade"><br>
+					<input type="submit" class="button"
+					value="Enviar"><br>
+				</form>
+			</div>
+			<div class = "div2">
+				<form name="input" action="secondPage.html">
+					Nome do remédio:<br>
+					<input type="text" name="nomeRemdio" value="Remedio"><br>
+					Tomar de quantas em quantas horas:<br>
+					<input type="text" name="horasTomar" value="Periodo"><br>
+					Primeiro horário a tomar o remédio:<br>
+					<input type="text" name="aPartir" value="Horario"><br>
+					Quantas unidades foram acrescentadas:<br>
+					<input type="text" name="qntdade" value="qntdade"><br>
+					<input type="submit" class="button"
+					value="Enviar"><br>
+				</form>
+			</div>
+			<div class = "div1">
+				<form name="input" action="secondPage.html">
+					Nome do remédio:<br>
+					<input type="text" name="nomeRemdio" value="Remedio"><br>
+					Tomar de quantas em quantas horas:<br>
+					<input type="text" name="horasTomar" value="Periodo"><br>
+					Primeiro horário a tomar o remédio:<br>
+					<input type="text" name="aPartir" value="Horario"><br>
+					Quantas unidades foram acrescentadas:<br>
+					<input type="text" name="qntdade" value="qntdade"><br>
+					<input type="submit" class="button"
+					value="Enviar"><br>
+				</form>
+			</div>
+			<div class = "div2">
+				<form name="input" action="secondPage.html">
+					Nome do remédio:<br>
+					<input type="text" name="nomeRemdio" value="Remedio"><br>
+					Tomar de quantas em quantas horas:<br>
+					<input type="text" name="horasTomar" value="Periodo"><br>
+					Primeiro horário a tomar o remédio:<br>
+					<input type="text" name="aPartir" value="Horario"><br>
+					Quantas unidades foram acrescentadas:<br>
+					<input type="text" name="qntdade" value="qntdade"><br>
+					<input type="submit" class="button"
+					value="Enviar"><br>
+				</form>
+			</div>	  
+	</div>
+
+	<div id="Histórico" class="tabcontent">
+	  <h3>Histórico</h3>
+
+	  <p>Colocar aqui histórico de remédios</p>
+	</div>
+<!-- Java Script -->
+	<script>
+	function openCity(evt, tabName) {
+	    var i, tabcontent, tablinks;
+	    tabcontent = document.getElementsByClassName("tabcontent");
+	    for (i = 0; i < tabcontent.length; i++) {
+	        tabcontent[i].style.display = "none";
+	    }
+	    tablinks = document.getElementsByClassName("tablinks");
+	    for (i = 0; i < tablinks.length; i++) {
+	        tablinks[i].className = tablinks[i].className.replace(" active", "");
+	    }
+	    document.getElementById(tabName).style.display = "block";
+	    evt.currentTarget.className += " active";
+	}
+ 	<!-- Choose a specific tab by defaut -->
+    document.getElementById("defaultOpen").click();
+	</script>
+
+	
+		
+	</center>
+</body>
+
+</html>

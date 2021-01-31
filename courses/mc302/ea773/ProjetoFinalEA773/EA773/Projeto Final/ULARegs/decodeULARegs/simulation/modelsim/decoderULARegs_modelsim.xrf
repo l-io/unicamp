@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, /home/leonardo/EA773/Projeto Final/ULARegs/decodeULARegs/decoderULARegs.bdf
+source_file = 1, /home/leonardo/EA773/Projeto Final/ULARegs/decodeULARegs/teste.vwf
+source_file = 1, /home/leonardo/EA773/Projeto Final/ULARegs/decodeULARegs/db/decoderULARegs.cbx.xml
+design_name = decoderULARegs
+instance = comp, \enbar[1]~I\, enbar[1], decoderULARegs, 1
+instance = comp, \enbar[2]~I\, enbar[2], decoderULARegs, 1
+instance = comp, \enbar[0]~I\, enbar[0], decoderULARegs, 1
+instance = comp, \inst6~0\, inst6~0, decoderULARegs, 1
+instance = comp, \en1~I\, en1, decoderULARegs, 1
+instance = comp, \en2~I\, en2, decoderULARegs, 1
+instance = comp, \en3~I\, en3, decoderULARegs, 1
+instance = comp, \en4~I\, en4, decoderULARegs, 1
+instance = comp, \en5~I\, en5, decoderULARegs, 1

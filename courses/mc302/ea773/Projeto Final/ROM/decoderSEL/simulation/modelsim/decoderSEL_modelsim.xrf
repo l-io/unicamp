@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, ../decoderROM/decoderSEL.bdf
+source_file = 1, /home/leonardo/EA773/Projeto Final/ROM/decoderSEL/decoderSEL.bdf
+source_file = 1, /home/leonardo/EA773/Projeto Final/ROM/decoderSEL/db/decoderSEL.cbx.xml
+design_name = decoderSEL
+instance = comp, \in[1]~I\, in[1], decoderSEL, 1
+instance = comp, \in[0]~I\, in[0], decoderSEL, 1
+instance = comp, \inst2~0\, inst2~0, decoderSEL, 1
+instance = comp, \inst2~1\, inst2~1, decoderSEL, 1
+instance = comp, \inst2~2\, inst2~2, decoderSEL, 1
+instance = comp, \O0~I\, O0, decoderSEL, 1
+instance = comp, \O1~I\, O1, decoderSEL, 1
+instance = comp, \O2~I\, O2, decoderSEL, 1
+instance = comp, \O3~I\, O3, decoderSEL, 1

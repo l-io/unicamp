@@ -1,0 +1,15 @@
+|Tristate4bits
+LEDR[0] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+SW[0] => inst4.DATAIN
+SW[1] => inst2.DATAIN
+SW[2] => inst1.DATAIN
+SW[3] => inst.DATAIN
+KEY[0] => inst.OE
+KEY[0] => inst1.OE
+KEY[0] => inst2.OE
+KEY[0] => inst4.OE
+
+

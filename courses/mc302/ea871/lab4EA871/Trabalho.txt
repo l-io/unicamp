@@ -1,0 +1,88 @@
+@Programa 4
+@Monica Aoki Faria RA: 156787
+@Leonardo Rodrigues Marques RA:178610
+
+/* This assembly file uses GNU syntax */
+	.text
+	.align 	   2
+	.global    main
+	.type main function
+
+@main function
+	main:
+		ldr r4, number1
+		ldr r5, number2
+		
+		@Isolando o expoente
+		lsr r6,r4,#23
+		lsr r7,r5,#23
+		
+		@Limpa o bit de sinal
+		ldr r1,=0b011111111
+		and r6,r1
+		and r7,r1
+		
+		@Isolando a mantissa
+		ldr r1, =0b00000000011111111111111111111111
+		and r4, r1
+		and r5, r1
+		
+		@Normaliza o expoente
+		sub r6,#127
+		sub r7,#127
+		
+		@Inserir 1 no bit 24
+		ldr r1, =0b00000000100000000000000000000000
+		orr r4, r1
+		orr r5, r1
+		
+		@Desloca a mantissa
+		lsl r4, r6
+		lsl r5, r7
+		
+		
+		
+	sum:
+		add r3, r4, r5
+		movs r2, r3
+	
+	@Isolar inteiro
+	lsr r2,#23
+	ldr r5, =0
+	function:
+		@r5: contador
+		@r2: valor interio
+		cmp r2, #1
+		beq out
+	
+		lsr r2, #1
+		add r5, #1
+			
+		b function
+	out:	
+		@Coloca a forma da notacao
+		lsr r3, r5
+		
+		@Soma o expoente(+127)
+		add r5, #127						
+		
+		@Apaga o bit 24
+		ldr r6, =0b11111111011111111111111111111111
+		and r3, r6
+		
+		@Desloca o expoente de 23 posicoes por causa da mantissa
+		lsl r5, #23
+		
+		@Junta o expoente com a mantissa
+		orr r3, r5
+		
+    .align	2
+    
+    @number1=1,5
+	number1:
+		.word 0b00111111110000000000000000000000
+		
+	@number2=3,25
+	number2:
+		.word 0b01000000010100000000000000000000
+	

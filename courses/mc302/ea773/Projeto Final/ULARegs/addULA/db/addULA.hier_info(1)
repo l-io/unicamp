@@ -1,0 +1,11 @@
+|addULA
+instr[0] <= <GND>
+instr[1] <= <VCC>
+instr[2] <= <GND>
+instr[3] <= <VCC>
+instr[4] <= <GND>
+instr[5] <= <GND>
+instr[6] <= <GND>
+instr[7] <= <GND>
+
+

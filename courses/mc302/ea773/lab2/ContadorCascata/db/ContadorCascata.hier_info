@@ -1,0 +1,179 @@
+|ContadorCascata
+Q[0] <= Contador:inst.Q[0]
+Q[1] <= Contador:inst.Q[1]
+Q[2] <= Contador:inst.Q[2]
+Q[3] <= Contador:inst.Q[3]
+Q[4] <= Contador:inst5.Q[0]
+clk => Contador:inst.clk
+clk => Contador:inst5.clk
+RESET => Contador:inst.RESET
+RESET => Contador:inst5.RESET
+Load_CP => Contador:inst.Load_CP
+Load_CP => inst4.IN0
+Load_CP => inst7.IN0
+Load_CP => inst3.IN0
+E3 => Contador:inst.E[3]
+E2 => Contador:inst.E[2]
+E1 => Contador:inst.E[1]
+E0 => Contador:inst.E[0]
+E4 => inst3.IN1
+
+
+|ContadorCascata|Contador:inst
+Q[0] <= D0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= D1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= D2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= D3.DB_MAX_OUTPUT_PORT_TYPE
+RESET => moduloReset:inst17.Reset
+RESET => moduloReset:inst16.Reset
+RESET => moduloReset:inst15.Reset
+RESET => moduloReset:inst10.Reset
+Load_CP => moduloCarregador:inst14.LOAD
+Load_CP => moduloCarregador:inst13.LOAD
+Load_CP => moduloCarregador:inst12.LOAD
+Load_CP => moduloCarregador:inst11.LOAD
+E[0] => moduloCarregador:inst14.B
+E[1] => moduloCarregador:inst13.B
+E[2] => moduloCarregador:inst12.B
+E[3] => moduloCarregador:inst11.B
+clk => D0.CLK
+clk => D1.CLK
+clk => D2.CLK
+clk => D3.CLK
+
+
+|ContadorCascata|Contador:inst|moduloReset:inst17
+S2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst1.IN0
+S => inst.IN1
+
+
+|ContadorCascata|Contador:inst|moduloCarregador:inst14
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => inst2.IN0
+LOAD => inst.IN0
+Q => inst1.IN1
+B => inst.IN1
+
+
+|ContadorCascata|Contador:inst|moduloReset:inst16
+S2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst1.IN0
+S => inst.IN1
+
+
+|ContadorCascata|Contador:inst|moduloCarregador:inst13
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => inst2.IN0
+LOAD => inst.IN0
+Q => inst1.IN1
+B => inst.IN1
+
+
+|ContadorCascata|Contador:inst|moduloReset:inst15
+S2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst1.IN0
+S => inst.IN1
+
+
+|ContadorCascata|Contador:inst|moduloCarregador:inst12
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => inst2.IN0
+LOAD => inst.IN0
+Q => inst1.IN1
+B => inst.IN1
+
+
+|ContadorCascata|Contador:inst|moduloReset:inst10
+S2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst1.IN0
+S => inst.IN1
+
+
+|ContadorCascata|Contador:inst|moduloCarregador:inst11
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => inst2.IN0
+LOAD => inst.IN0
+Q => inst1.IN1
+B => inst.IN1
+
+
+|ContadorCascata|Contador:inst5
+Q[0] <= D0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= D1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= D2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= D3.DB_MAX_OUTPUT_PORT_TYPE
+RESET => moduloReset:inst17.Reset
+RESET => moduloReset:inst16.Reset
+RESET => moduloReset:inst15.Reset
+RESET => moduloReset:inst10.Reset
+Load_CP => moduloCarregador:inst14.LOAD
+Load_CP => moduloCarregador:inst13.LOAD
+Load_CP => moduloCarregador:inst12.LOAD
+Load_CP => moduloCarregador:inst11.LOAD
+E[0] => moduloCarregador:inst14.B
+E[1] => moduloCarregador:inst13.B
+E[2] => moduloCarregador:inst12.B
+E[3] => moduloCarregador:inst11.B
+clk => D0.CLK
+clk => D1.CLK
+clk => D2.CLK
+clk => D3.CLK
+
+
+|ContadorCascata|Contador:inst5|moduloReset:inst17
+S2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst1.IN0
+S => inst.IN1
+
+
+|ContadorCascata|Contador:inst5|moduloCarregador:inst14
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => inst2.IN0
+LOAD => inst.IN0
+Q => inst1.IN1
+B => inst.IN1
+
+
+|ContadorCascata|Contador:inst5|moduloReset:inst16
+S2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst1.IN0
+S => inst.IN1
+
+
+|ContadorCascata|Contador:inst5|moduloCarregador:inst13
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => inst2.IN0
+LOAD => inst.IN0
+Q => inst1.IN1
+B => inst.IN1
+
+
+|ContadorCascata|Contador:inst5|moduloReset:inst15
+S2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst1.IN0
+S => inst.IN1
+
+
+|ContadorCascata|Contador:inst5|moduloCarregador:inst12
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => inst2.IN0
+LOAD => inst.IN0
+Q => inst1.IN1
+B => inst.IN1
+
+
+|ContadorCascata|Contador:inst5|moduloReset:inst10
+S2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst1.IN0
+S => inst.IN1
+
+
+|ContadorCascata|Contador:inst5|moduloCarregador:inst11
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => inst2.IN0
+LOAD => inst.IN0
+Q => inst1.IN1
+B => inst.IN1
+
+

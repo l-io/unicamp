@@ -1,0 +1,17 @@
+﻿EA871 – R
+Leonardo Rodrigues Marques - 178610		
+
+1) A notação 0x no ambiente computacional representa números escritos em hexadeciamal.
+2) O unsigned int é representado por 8 bits.
+3) O qualificador volatile indica ao compilador para não otimizar o código que contém a variável. Ele é usado para variáveis que podem ser alteradas externamente ao código.
+4) A declaração é uma macro. Ao invés de digitar um endereço ou uma expressão complicada, pode ser substituido por uma macro para simplificar o entendimento do código.
+5) Os endereços dos registradores estão nas páginas especificadas abaixo:
+Habilitação da GPIO: 192
+MUX das portas: 179
+Data Direction, Set Bit Register:773
+Todas estão no manual do microcontrolador.
+6)A pinagem está localida na página 12 no manual FRDM-KL25Z User's Manual.
+7) O operador & faz um operção loǵica AND bit a bit, enquanto o operador && faz uma operação lógica AND dos bits do registrador para avaliar a validade de um valor.
+8) O operador | faz uma operação lógica OR bit a bit, enquanto o operador || faz uma operação lógica OR dos bits do registrador para avaliar a validade de um valor.
+9)Ao fazer o deslocamento, poderia haver perda ou alteração de informação no registrador. A operação OR altera apenas o valor especificado. Ao fazer essa procedimento, seria colocado 0x00040000.
+10) O laço for do programa faz um loop infinito no programa.

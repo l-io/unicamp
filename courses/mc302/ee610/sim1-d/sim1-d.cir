@@ -1,0 +1,24 @@
+* C:\Users\Squadra\Desktop\ee610\sim1-d\sim1-d.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Jan 22 13:44:31 2021
+
+
+
+** Analysis setup **
+.tran 0ns 6ns 0 0.1ps
+.OP 
+.LIB "C:\Users\Squadra\Desktop\ee610\sim1\sim1.lib"
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "sim1-d.net"
+.INC "sim1-d.als"
+
+
+.probe
+
+
+.END

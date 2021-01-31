@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, /net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab5/progm1/progm1.bdf
+source_file = 1, /net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab5/progm1/Waveform.vwf
+source_file = 1, teste.vwf
+source_file = 1, /net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab5/progm1/db/progm1.cbx.xml
+source_file = 1, /net/nfs1.fee.unicamp.br/export/vol1/home/EC16/ra178610/EA773/lab5/progm1/decodificador.bdf
+design_name = progm1
+instance = comp, \addr[0]~I\, addr[0], progm1, 1
+instance = comp, \addr[2]~I\, addr[2], progm1, 1
+instance = comp, \addr[1]~I\, addr[1], progm1, 1
+instance = comp, \inst2~1\, inst2~1, progm1, 1
+instance = comp, \inst5~1\, inst5~1, progm1, 1
+instance = comp, \d_out[2]~I\, d_out[2], progm1, 1
+instance = comp, \d_out[1]~I\, d_out[1], progm1, 1
+instance = comp, \d_out[0]~I\, d_out[0], progm1, 1

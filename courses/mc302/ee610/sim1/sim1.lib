@@ -1,0 +1,4 @@
+.model Mbreakp PMOS VTO = -1 W =  2u L = 1u KP = 50u 
+*$
+.model MbreakN-X NMOS VTO = 1 W =  1u L = 1u KP = 100u 
+*$
