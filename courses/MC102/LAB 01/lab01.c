@@ -1,10 +1,16 @@
+/*
+ * Author: Leonardo Rodrigues
+ * Language:  C
+ * Note: my first lines of code
+ */
+
 #include<stdio.h>
 
 int main()
 {
   long int a, b, c, d, e, f, g, h, i, j, k ,l ,m ,n, o, p ,q, r, s, t, u, v, ki;
 	printf("Digite a data, a quantidade de dias do mes,a quantidade de meses do ano, e numeros de dias na decimal 6:");
-	scanf("%ld/%ld/%ld %ld %ld %ld" &a, &b, &c, &d, &e, &f);
+	scanf("%ld/%ld/%ld %ld %ld %ld", &a, &b, &c, &d, &e, &f);
 	g=f/10000000;
 	h=f%10000000;
 	i=h/1000000;
