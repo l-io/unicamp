@@ -1,5 +1,0 @@
-set tool_name "ModelSim-Altera (VHDL)"
-set corner_file_list {
-	{{"Slow Model"} {programaFibonacci.vho programaFibonacci_vhd.sdo}}
-	{{"Fast Model"} {programaFibonacci_fast.vho programaFibonacci_vhd_fast.sdo}}
-}
