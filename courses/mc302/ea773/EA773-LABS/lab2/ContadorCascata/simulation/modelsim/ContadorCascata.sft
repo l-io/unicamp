@@ -1,5 +1,0 @@
-set tool_name "ModelSim-Altera (VHDL)"
-set corner_file_list {
-	{{"Slow Model"} {ContadorCascata.vho ContadorCascata_vhd.sdo}}
-	{{"Fast Model"} {ContadorCascata_fast.vho ContadorCascata_vhd_fast.sdo}}
-}
