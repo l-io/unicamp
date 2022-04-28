@@ -1,0 +1,5 @@
+kp = 17.69
+kd = 9.676
+ki = 3.089
+iterações = 45
+população = 74

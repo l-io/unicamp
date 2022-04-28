@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -U -M 2
+Relation:     AD1
+Instances:    70
+Attributes:   7
+              temperatura_media
+              umidade_media
+              altura_chuva_mensal
+              precip_21_dias
+              numero_dias_chuva
+              local
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 unpruned tree
+------------------
+
+temperatura_media <= 21.87
+|   numero_dias_chuva <= 4
+|   |   local = ID: 1 (3.0)
+|   |   local = IM: 1 (3.0)
+|   |   local = PM: 1 (3.0/1.0)
+|   |   local = CHI: 0 (3.0/1.0)
+|   |   local = GAL: 0 (3.0)
+|   numero_dias_chuva > 4: 1 (50.0/1.0)
+temperatura_media > 21.87: 0 (5.0/1.0)
+
+Number of Leaves  : 	7
+
+Size of the tree : 	10
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          63               90      %
+Incorrectly Classified Instances         7               10      %
+Kappa statistic                          0.636 
+Mean absolute error                      0.1154
+Root mean squared error                  0.2826
+Relative absolute error                 42.3552 %
+Root relative squared error             77.4978 %
+Total Number of Instances               70     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,727    0,068    0,667      0,727    0,696      0,637    0,814     0,592     0
+                 0,932    0,273    0,948      0,932    0,940      0,637    0,814     0,927     1
+Weighted Avg.    0,900    0,241    0,904      0,900    0,902      0,637    0,814     0,874     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+  8  3 |  a = 0
+  4 55 |  b = 1
+

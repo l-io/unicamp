@@ -1,0 +1,7 @@
+tempo de subida: 0.594
+melhor fitness: 1
+kp: 17.36
+ki: 5.578
+kd: 3.146
+pop: 250
+ger: 110
