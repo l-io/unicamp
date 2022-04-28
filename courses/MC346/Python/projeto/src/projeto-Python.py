@@ -10,7 +10,7 @@ import sys
 class Node:
     def __init__(self, name):
         self.name = name
-        self.distance = {name: -1}
+        self.distance = {}
         self.maxSpeed = {}
         self.lastSpeeds = {}
 
@@ -23,16 +23,15 @@ class Node:
 
 def main():
     start, end, graph = buildGraph()
-
-    for i in graph:
-        print(graph[i].name, graph[i].distance, graph[i].maxSpeed, graph[i].lastSpeeds)
-
-    print(start, end)
+    
+    for i in graph.values():
+        print(i.name, i.distance, i.maxSpeed, i.lastSpeeds)
+    dijkstra(start, end, graph)
     
 def buildGraph():
     dataGraph = {}
 
-    with open("file.txt") as contents:
+    with open(sys.argv[1]) as contents:
         maxSpeed = float(contents.readline())
 
         #Read nodes and edges to build graph
@@ -53,12 +52,16 @@ def buildGraph():
                 speed[0] = float(speed[0].strip('\n'))
             
             if start in dataGraph:
-                dataGraph[start].addEdge(end, distance, speed[0])
-            
+                dataGraph[start].addEdge(end, distance, speed)
+        
             else:
                 newNode = Node(start)
-                newNode.addEdge(end, distance, speed[0])
+                newNode.addEdge(end, distance, speed)
                 dataGraph[start] = newNode
+
+            if end not in dataGraph:
+                newNode = Node(end)
+                dataGraph[end] = newNode
           
         #Read updated edges
         for lines in contents:
@@ -79,10 +82,13 @@ def buildGraph():
 
         return start, end, dataGraph
 
-def dijkstra():
-    #Function to be implemented
-    test = 3
+def dijkstra(start, end, graph):
     
+    visited = []
+    heap = []
+    way = []
+
+
 def checkInput():
     #This has to be done
     test = 3
