@@ -23,4 +23,4 @@ def lighten_images(image, file, local_path, gamma):
                 "{}-{}".format(str(gamma), file)), image)
 
     # status to user
-    print('-- Task 1.2 completed with gamma {}. File at 12 folder!'.format(str(gamma)))
+    print('-- Task 1.2 completed with gamma {}. File at output/12 folder!'.format(str(gamma)))

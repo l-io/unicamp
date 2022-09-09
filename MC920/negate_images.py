@@ -18,4 +18,4 @@ def negate_images(images, files, local_path):
                     '11b', files[i]), neg_images[i])
 
     # status to user
-    print('-- Task 1.1-b completed. Files at 11b folder!')
+    print('-- Task 1.1-b completed. Files at output/11b folder!')
