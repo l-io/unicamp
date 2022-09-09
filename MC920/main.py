@@ -1,36 +1,82 @@
-from threading import local
-from time import process_time_ns
 import cv2
 import os
 
-# Get absolute path to images directory
-local_path = os.path.abspath(os.getcwd())
-absolute_path = os.path.join(local_path, "images")
 
-# Create paths to images
-images_paths = []
-files = os.listdir(absolute_path)
+def load_images(images, files):
 
-for file in files:
-    images_paths.append(os.path.join(absolute_path, file))
+    # Get absolute path to images directory
+    local_path = os.path.abspath(os.getcwd())
+    absolute_path = os.path.join(local_path, "images")
 
-# Read images from paths using cv2
-images = []
+    # Create paths to images
+    images_paths = []
+    files.extend(os.listdir(absolute_path))
 
-for path in images_paths:
-    images.append(cv2.imread(path, cv2.IMREAD_GRAYSCALE))
+    for file in files:
+        images_paths.append(os.path.join(absolute_path, file))
 
-# 1.1
+    # Read images from paths using cv2
+    for path in images_paths:
+        images.append(cv2.imread(path, cv2.IMREAD_GRAYSCALE))
 
-# 1.1-b
-neg_images = []
+    # status to user
+    print('-- Images loaded!')
 
-# apply negative
-for image in images:
-    neg_images.append(255 - image)
+    return local_path
 
-# save in directory 11b
-for i in range(0, len(neg_images)):
-    cv2.imwrite(os.path.join(local_path, '11b', files[i]), neg_images[i])
 
-# 1.1-c
+def negate_images(images, files, local_path):
+
+    neg_images = []
+
+    # apply negative
+    for image in images:
+        neg_images.append(255 - image)
+
+    # save in directory 11b
+    for i in range(0, len(neg_images)):
+        cv2.imwrite(os.path.join(local_path, '11b', files[i]), neg_images[i])
+
+    # status to user
+    print('-- Task 1.1-b completed. Files at 11b folder!')
+
+
+def lighten_image(image, file, local_path, gamma):
+
+    # normalize image and transform
+    image = (image / 2.55) ** (1/gamma)
+
+    # expand image
+    range = image.max() - image.min()
+    image = image * (255/range)
+
+    # moving to interval
+    min = image.min()
+    image = image - min
+    image = image.astype(int)
+
+    cv2.imwrite(os.path.join(local_path, '12',
+                "{}-{}".format(str(gamma), file)), image)
+
+    # status to user
+    print('-- Task 1.2 completed with gamma {}. File at 12 folder!'.format(str(gamma)))
+
+
+def main():
+
+    images = []
+    files = []
+    local_path = load_images(images, files)
+
+    # 1.1-b
+    negate_images(images, files, local_path)
+
+    # 1.2
+    gammas = [1.5, 2.5, 3.5]
+    baboon = files.index('baboon.png')
+    for gamma in gammas:
+        lighten_image(images[baboon], files[baboon], local_path, gamma)
+
+
+if __name__ == "__main__":
+    main()
