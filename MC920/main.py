@@ -76,6 +76,7 @@ def main():
             reverse_images(images[city], images_name[city], local_path)
             transform_images(images[city], images_name[city], local_path)
             reflection_images(images[city], images_name[city], local_path)
+            mirroring_images(images[city], images_name[city], local_path)
 
             gammas = [1.5, 2.5, 3.5]
             for gamma in gammas:
