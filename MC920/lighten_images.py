@@ -4,7 +4,7 @@ import os
 # 1.2
 
 
-def lighten_images(image, file, local_path, gamma):
+def lighten_images(image, image_name, local_path, gamma):
 
     # normalize image and transform
     image = (image / 2.55) ** (1/gamma)
@@ -20,7 +20,7 @@ def lighten_images(image, file, local_path, gamma):
 
     # write in folder 12
     cv2.imwrite(os.path.join(local_path, 'output', '12',
-                "{}-{}".format(str(gamma), file)), image)
+                "{}-{}".format(str(gamma), image_name)), image)
 
     # status to user
     print('-- Task 1.2 completed with gamma {}. File at output/12 folder!'.format(str(gamma)))
