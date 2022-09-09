@@ -1,9 +1,7 @@
 import sys
-from tkinter import image_names
-from tkinter.font import names
-from unicodedata import name
 import cv2
 import os
+import numpy as np
 
 from negate_images import negate_images
 from lighten_images import lighten_images
@@ -15,11 +13,12 @@ from reverse_images import reverse_images
 from transform_images import transform_images
 from reflection_images import reflection_images
 from mirroring_images import mirroring_images
+from mosaic_images import mosaic_images
 
 
 def main():
 
-    args = 'mirroring_images'
+    args = ''
 
     images = []
     images_name = []
@@ -58,12 +57,19 @@ def main():
                 combine_images(images[baboon], images[butterfly],
                                images_name[baboon], images_name[butterfly], local_path, average)
 
+        case "bitplane_images":
+            bitplane_images(images[baboon], images_name[baboon], local_path)
+
+        case "mosaic_images":
+            order = np.array([6, 11, 13, 3, 8, 16, 1, 9,
+                             12, 14, 2, 7, 4, 15, 10, 5])
+            order = order - 1
+            mosaic_images(images[baboon], images_name[baboon],
+                          local_path, order, 4)
+
         case "filter_images":
             filter_images(images[baboon], images_name[baboon],
                           local_path)
-
-        case "bitplane_images":
-            bitplane_images(images[baboon], images_name[baboon], local_path)
 
         case _:
             negate_images(images, images_name, local_path)
@@ -77,6 +83,12 @@ def main():
                     images[baboon], images_name[baboon], local_path, gamma)
 
             bitplane_images(images[baboon], images_name[baboon], local_path)
+
+            order = np.array([6, 11, 13, 3, 8, 16, 1, 9,
+                             12, 14, 2, 7, 4, 15, 10, 5])
+            order = order - 1
+            mosaic_images(images[baboon], images_name[baboon],
+                          local_path, order, 4)
 
             averages = [0.2, 0.5, 0.8]
             for average in averages:
