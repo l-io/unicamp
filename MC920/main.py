@@ -11,7 +11,7 @@ from filter_images import filter_images
 
 def main():
 
-    args = ''
+    args = 'filter_images'
 
     images = []
     images_name = []
@@ -39,7 +39,7 @@ def main():
 
         case "filter_images":
             filter_images(images[baboon], images_name[baboon],
-                          local_path)
+                          local_path, )
 
         case _:
             negate_images(images, images_name, local_path)
