@@ -61,6 +61,9 @@ def filter_images(image, name_image, path):
     cv2.imwrite(os.path.join(path, 'output', '16',
                 "H3-H4-{}".format(name_image)), mixed_image)
 
+    # status to user
+    print('-- Task 1.6 completed with H3-H4 filter. File at output/16 folder!')
+
     # apply H11 filter
     conv_image = cv2.filter2D(src=image, ddepth=-1, kernel=kernel_H11)
 

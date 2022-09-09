@@ -1,4 +1,5 @@
 import sys
+from unicodedata import name
 import cv2
 import os
 
@@ -7,11 +8,12 @@ from lighten_images import lighten_images
 from load_images import load_images
 from combine_images import combine_images
 from filter_images import filter_images
+from bitplane_images import bitplane_images
 
 
 def main():
 
-    args = 'filter_images'
+    args = ''
 
     images = []
     images_name = []
@@ -39,7 +41,10 @@ def main():
 
         case "filter_images":
             filter_images(images[baboon], images_name[baboon],
-                          local_path, )
+                          local_path)
+
+        case "bitplane_images":
+            bitplane_images(images[baboon], images_name[baboon], local_path)
 
         case _:
             negate_images(images, images_name, local_path)
@@ -49,10 +54,14 @@ def main():
                 lighten_images(
                     images[baboon], images_name[baboon], local_path, gamma)
 
+            bitplane_images(images[baboon], images_name[baboon], local_path)
+
             averages = [0.2, 0.5, 0.8]
             for average in averages:
                 combine_images(images[baboon], images[butterfly],
                                images_name[baboon], images_name[butterfly], local_path, average)
+
+            filter_images(images[baboon], images_name[baboon], local_path)
 
 
 if __name__ == "__main__":
