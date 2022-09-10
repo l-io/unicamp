@@ -7,8 +7,10 @@ import numpy as np
 
 def mirroring_images(image, name, path):
 
+    mir_image = np.copy(image)
+
     # use np flip function
-    image = np.flip(image, axis=0)
+    mir_image = np.flip(mir_image, axis=0)
 
     # write in folder 11f
-    cv2.imwrite(os.path.join(path, 'output', '11f', name), image)
+    cv2.imwrite(os.path.join(path, 'output', '11f', name), mir_image)
