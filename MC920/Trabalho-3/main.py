@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-from turtle import clear
 import cv2
 import os
 import sys
@@ -8,13 +7,10 @@ import sys
 from load_images import load_images
 from dithering import dithering
 from compression import compression
-# from filter_in_frequency import filter_in_frequency
+from fft import fft
 
 
 def main():
-
-    mode = sys.argv[1]
-    direction = sys.argv[2]
 
     modes = ["1", "2", "3", "4", "5", "6"]
     directions = ["zigzag", "straight"]
@@ -41,9 +37,83 @@ def main():
                     cv2.imwrite(os.path.join(path, 'output',
                                              "{}-{}-{}".format(mode, direction, image_name)), result)
 
+        result = compression(image, 70)
+        cv2.imwrite(os.path.join(path, 'output',
+                                 "{}-{}-{}".format("70", "compression", image_name)), result)
+
         result = compression(image, 60)
         cv2.imwrite(os.path.join(path, 'output',
                                  "{}-{}-{}".format("60", "compression", image_name)), result)
+
+        result = compression(image, 40)
+        cv2.imwrite(os.path.join(path, 'output',
+                                 "{}-{}-{}".format("40", "compression", image_name)), result)
+
+        if 'color' not in image_name:
+
+            # Low pass filter - 100, 50, 0
+            plt, result = fft(image.copy(), 'low', 100, 0)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("low-100", "filter", image_name)), result)
+
+            plt, result = fft(image.copy(), 'low', 50, 0)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("low-50", "filter", image_name)), result)
+
+            plt, result = fft(image.copy(), 'low', 10, 0)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("low-10", "filter", image_name)), result)
+
+            # High pass filter - 30, 10, 3
+            plt, result = fft(image.copy(), 'high', 30, 0)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("high-30", "filter", image_name)), result)
+
+            plt, result = fft(image.copy(), 'high', 10, 0)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("high-10", "filter", image_name)), result)
+
+            plt, result = fft(image.copy(), 'high', 3, 0)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("high-3", "filter", image_name)), result)
+
+            # Band pass filter - 2 e 300, 10 e 40, 30 e 100
+            plt, result = fft(image.copy(), 'band', 2, 300)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("band-2-300", "filter", image_name)), result)
+
+            plt, result = fft(image.copy(), 'band', 10, 40)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("band-10-40", "filter", image_name)), result)
+
+            plt, result = fft(image.copy(), 'band', 30, 100)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("band-30-100", "filter", image_name)), result)
+
+            # Reject band pass filter - 2 e 300, 10 e 40, 30 e 100
+            plt, result = fft(image.copy(), 'rband', 300, 2)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("rband-300-2", "filter", image_name)), result)
+
+            plt, result = fft(image.copy(), 'rband', 300, 50)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("rband-300", "filter", image_name)), result)
+
+            plt, result = fft(image.copy(), 'rband', 150, 100)
+            plt.savefig('output/fft-{}'.format(image_name))
+            cv2.imwrite(os.path.join(path, 'output',
+                                     "{}-{}-{}".format("rband-100", "filter", image_name)), result)
 
 
 if __name__ == "__main__":

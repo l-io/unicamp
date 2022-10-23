@@ -17,7 +17,6 @@ def compression(img, percent):
     maxval = spec.max()
     tresh = base+(maxval-base)*(percent/100)
     compressed = centralized.copy()
-    print(f"Compressing {len(compressed[spec < tresh])} values...")
     compressed[spec < tresh] = 0+0j
 
     decentralized = np.fft.ifftshift(compressed)
