@@ -22,7 +22,7 @@ def apply_filter(image, kernel, r1, r2):
     elif kernel == 'rband':
         A = (dist <= r1)
         B = (r2 <= dist)
-        filt = np.logical_and(A, B)
+        filt = ~np.logical_and(A, B)
     else:
         return image
 
