@@ -21,12 +21,9 @@ def load_images(images, files):
 
     # Read images from paths using cv2
     for path in images_paths:
-        if "color" in path:
-            images.append(cv2.imread(path, cv2.IMREAD_COLOR))
-        else:
-            images.append(cv2.imread(path, cv2.IMREAD_GRAYSCALE))
+        images.append(cv2.imread(path, cv2.IMREAD_GRAYSCALE))
 
     # status to user
     print('-- Images loaded!')
 
-    return local_path
+    return local_path, images_paths

@@ -45,9 +45,12 @@ def main():
 
     images = []
     images_name = []
-    path = load_images(images, images_name)
+    path, images_path = load_images(images, images_name)
 
-    for img, img_name in zip(images, images_name):
+    for img, img_name, img_path in zip(images, images_name, images_path):
+
+        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+
         # Mono output
         thresh = 250
         img_mono = cv2.threshold(img, thresh, 255, cv2.THRESH_BINARY)[1]
@@ -66,7 +69,7 @@ def main():
         hist_small = hist_medium = hist_large = 0
         area_list = []
 
-        img_regions = img.copy()
+        img_regions = cv2.imread(img_path)
         n_contours = len(contours)-1
 
         print("número de regiões: " + str(n_contours))
