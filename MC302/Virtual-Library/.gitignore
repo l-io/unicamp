@@ -1,4 +1,16 @@
+# Build output
 /bin/
 /src/build/
+/src/out/
+
+# IDE settings
 .vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# macOS
 .DS_Store
+_DS_Store
