@@ -1,6 +1,5 @@
 package telas;
 
-;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import trabalho1.*;

@@ -1,1 +1,4 @@
 /bin/
+/src/build/
+.vscode/
+.DS_Store
