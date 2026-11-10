@@ -1,31 +1,31 @@
-# Programação Orientada a Objetos
+# Object-Oriented Programming
 
-## Trabalho de MC302: Biblioteca Virtual
+## MC302 Project: Virtual Library
 
-Projeto final da matéria de MC302 ministrada pela professora Esther Colombini.
+Final project for MC302, taught by Professor Esther Colombini.
 
-### Sobre o projeto
+### About
 
-A Biblioteca Virtual é um sistema desktop feito em Java, com interface gráfica em Swing, que simula uma biblioteca em que os usuários pegam livros emprestados da própria biblioteca ou uns dos outros. O objetivo do trabalho foi aplicar os conceitos de orientação a objetos vistos na disciplina, como herança, polimorfismo, encapsulamento, classes abstratas e tratamento de exceções.
+Virtual Library is a Java desktop application with a Swing interface. It simulates a library where users borrow books from the library itself or from each other. The goal of the project was to apply the object-oriented concepts covered in the course, such as inheritance, polymorphism, encapsulation, abstract classes and exception handling.
 
-### Funcionalidades
+### Features
 
-- Cadastro e login de usuários
-- Tipos de usuário: comum, estudante e administrador, cada um com seu próprio menu
-- Empréstimo de livros da biblioteca e entre usuários
-- Saldo, que pode receber créditos, e cupons de desconto
-- Lista de amigos e troca de mensagens entre usuários
-- Funções de administrador: cadastrar livros e cupons, banir usuários e ver o estado do sistema
-- Modo de teste ao iniciar e gravação dos dados em arquivos de texto
+- User sign-up and login
+- Three user types: regular, student and admin, each with its own menu
+- Borrowing books from the library and between users
+- An account balance that can be topped up, plus discount coupons
+- A friends list and messages between users
+- Admin tools: add books and coupons, ban users and view the system status
+- A test mode at startup, with data saved to text files
 
-### Estrutura
+### Structure
 
-- `trabalho1/src/trabalho1/`: classes do sistema (`Usuario`, `Livro`, `Biblioteca`, `Emprestimo`, `Gerenciador`...)
-- `trabalho1/src/telas/`: telas da interface gráfica
+- `trabalho1/src/trabalho1/`: core classes (`Usuario`, `Livro`, `Biblioteca`, `Emprestimo`, `Gerenciador`...)
+- `trabalho1/src/telas/`: user interface screens
 
-### Como executar
+### How to run
 
-É preciso ter o Java (JDK) instalado. Rode os comandos a partir de `trabalho1/src`:
+You need a Java JDK installed. Run these commands from `trabalho1/src`:
 
 ```bash
 javac -encoding UTF-8 -d build trabalho1/*.java telas/*.java
@@ -33,9 +33,9 @@ mkdir -p testeArquivos
 java -cp build trabalho1.Main
 ```
 
-A pasta `testeArquivos` é onde o programa grava os dados, por isso ela precisa existir no diretório em que o programa é executado.
+The program saves its data in the `testeArquivos` folder, so that folder must exist in the directory you run the program from.
 
-### Autores
+### Authors
 
 - Alexandre Luciano Barbosa
 - João Pedro de Amorim
