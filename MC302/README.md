@@ -20,14 +20,15 @@ Virtual Library is a Java desktop application with a Swing interface. It simulat
 
 ### Structure
 
-- `trabalho1/src/trabalho1/`: core classes (`Usuario`, `Livro`, `Biblioteca`, `Emprestimo`, `Gerenciador`...)
-- `trabalho1/src/telas/`: user interface screens
+- `Virtual-Library/src/trabalho1/`: core classes (`Usuario`, `Livro`, `Biblioteca`, `Emprestimo`, `Gerenciador`...)
+- `Virtual-Library/src/telas/`: user interface screens
 
 ### How to run
 
-You need a Java JDK installed. Run these commands from `trabalho1/src`:
+You need a Java JDK installed. From the `MC302` folder, run:
 
 ```bash
+cd Virtual-Library/src
 javac -encoding UTF-8 -d build trabalho1/*.java telas/*.java
 mkdir -p testeArquivos
 java -cp build trabalho1.Main
